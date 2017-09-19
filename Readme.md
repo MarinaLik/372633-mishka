@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Marina Lik](https://up.htmlacademy.ru/adaptive/12/user/372633).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Кравченко](https://up.htmlacademy.ru/profile/id13921).
 
 ---
 
