@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo--mobile" src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
+        </a>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__inner popap">
+          <button class="popap__close" type="button">Закрыть меню</button>
+          <ul class="main-nav__list top-menu">
+            <li class="top-menu__item">
+              <a>Каталог товаров</a>
+            </li>
+            <li class="top-menu__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="top-menu__item top-menu__item--search">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="top-menu__item top-menu__item--cart">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="page-header__intro">
+        <h1 class="page__title">Каталог товаров</h1>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="section catalog">
+        <article class="catalog__item product">
+          <a class="product__link" href="#">
+            <img class="product__image" src="#" alt="Зайчик-попрыгайчик">
+            <div class="product__inner">
+              <h2 class="product__name">Зайчик-попрыгайчик</h2>
+              <span class="product__descr">Рост 30 см, вес 200 г</span>
+            </div>
+          </a>
+          <div class="product__order">
+            <b class="product__prise">1 200 руб.</b>
+            <button class="product__cart btn btn__icon">Купить</button>
+          </div>
+        </article>
+        <article class="catalog__item product">
+          <a class="product__link" href="#">
+            <img class="product__image" src="#" alt="Зайчик-попрыгайчик">
+            <div class="product__inner">
+              <h2 class="product__name">Корзинка для белья</h2>
+              <span class="product__descr">Диаметр 15 см, высота 10 см</span>
+            </div>
+          </a>
+          <div class="product__order">
+            <b class="product__prise">690 руб.</b>
+            <button class="product__cart btn btn__icon">Купить</button>
+          </div>
+        </article>
+        <article class="catalog__item product">
+          <a class="product__link" href="#">
+            <img class="product__image" src="#" alt="Зайчик-попрыгайчик">
+            <div class="product__inner">
+              <h2 class="product__name">Большая корзинка для игрушек</h2>
+              <span class="product__descr">Диаметр 30 см, высота 30 см</span>
+            </div>
+          </a>
+          <div class="product__order">
+            <b class="product__prise">1 500 руб.</b>
+            <button class="product__cart btn btn__icon">Купить</button>
+          </div>
+        </article>
+      </section>
+      <section class="section promo">
+        <h2 class="promo__title">Процесс производства</h2>
+        <video class="promo__video video video--mobile" poster="#">
+          <source src="#.ogv" type="video/ogg">
+          <source src="#.mp4" type="video/mp4">
+          <source src="#.webm" type="video/webm">
+          <button class="video__player">Воспроизвести</button>
+        </video>
+        <p class="promo__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="promo__order btn" href="form.html">Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#" target="_blank">Мы в Инстаграме</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#" target="_blank">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#" target="_blank">Мы в Твиттере</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      </div>
+    </footer>
+    <div class="modal">
+      <p class="modal__title">Добавить в корзину</p>
+      <div class="midal__list">
+        <button class="modal__btn btn btn--size">s</button>
+        <button class="modal__btn btn btn--size">m</button>
+        <button class="modal__btn btn btn--size">l</button>
+      </div>
+      <a class="modal__order btn btn--green" href="">Добавить</a>
+    </div>
+  </body>
+</html>
