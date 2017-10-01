@@ -1,0 +1,17 @@
+.slider__pagination {
+  display: flex;
+  margin: 35px 0;
+}
+
+.slider__btn {
+  @include indent;
+  width: 128px;
+  height: 50px;
+  border: $border-line;
+  background-color: $white;
+  font-size: 0;
+}
+
+.slider__btn:last-child {
+  margin-left: -1px;
+}

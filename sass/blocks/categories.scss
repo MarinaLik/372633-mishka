@@ -1,0 +1,25 @@
+.categories {
+  margin: -72px auto 0;
+}
+
+.categories__list {
+  @include indent;
+  list-style: none;
+}
+
+.categories__item {
+  @include indent;
+}
+
+.categories__item a {
+  @include font-set(19px, 24px);
+  display: block;
+  padding: 27px 160px 27px 30px;
+  color: $white;
+  background-color: $color-secondery;
+  text-decoration: none;
+}
+
+.categories__item:last-child a {
+  background-color: #56c3b2;
+}

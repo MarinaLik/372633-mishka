@@ -1,0 +1,66 @@
+.order-form {
+  @include indent;
+}
+
+.order-form__group {
+  margin: 0;
+  padding: 0 30px 30px;
+  border: none;
+}
+
+.order-form__group {
+  padding-bottom: 0;
+}
+
+.order-form__title {
+  @include font-caps(700, $font-size, 1.4);
+  color: $color-secondery;
+  padding-right: 27px;
+  margin-bottom: 12px;
+}
+// линия псевдоэлементом
+
+.order-form__label-radio {
+  @include font-set($font-size, 18px);
+  color: $black;
+  padding-left: 21px;
+}
+
+.order-form__label-check {
+  @include font-set($font-size, 18px);
+  color: $black;
+  padding-left: 23px;
+}
+
+.order-form__label {
+  @include font-set($font-size, 18px);
+  color: $black;
+}
+
+.order-form__input {
+  @include font($font-size, 18px);
+  width: 260px;
+  padding: 16px 1px;
+  border: none;
+  border-bottom: 2px solid $black;
+}
+
+.order-form__message {
+  width: 256px;
+  height: 138px;
+  border: 2px solid $color-primary;
+}
+
+.order-form__footer {
+  margin: 10px 30px 55px;
+}
+
+.order-form__caption {
+  @include font(14px, 16px);
+  color: $color-primary;
+}
+
+.order-form__btn {
+  width: 256px;
+  margin-top: 30px;
+}

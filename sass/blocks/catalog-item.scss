@@ -1,0 +1,45 @@
+.catalog-item {
+  @include indent;
+  margin-bottom: 30px;
+}
+
+.catalog-item__descr {
+  border: $border-line;
+  width: 202px;
+  padding: 0 28px;
+}
+
+.catalog-item__name {
+  text-decoration: none;
+}
+
+.catalog-item__name h2 {
+  @include font-set($font-size, 1.4);
+  color: $black;
+}
+
+.catalog-item__text {
+  @include font(13px, 1.4);
+  color: $color-primary;
+}
+
+.catalog-item__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px;
+  border-top: $border-line;
+}
+
+.catalog-item__price {
+  @include font-set(15px, 24px);
+  color: $black;
+}
+
+.catalog-item__btn {
+  display: inline-block;
+  width: 21px;
+  height: 19px;
+  background-color: $color-primary;
+  font-size: 0;
+}

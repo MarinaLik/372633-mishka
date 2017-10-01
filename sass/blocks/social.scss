@@ -1,0 +1,26 @@
+.social {
+  margin: 0 30px;
+}
+
+.social__list {
+  @include indent;
+  @include center;
+  height: 79px;
+  list-style: none;
+}
+
+// временные стили для иконок
+.social__item {
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: $white;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__link {
+  font-size: 0;
+}

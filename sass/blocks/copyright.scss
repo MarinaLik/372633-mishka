@@ -1,0 +1,18 @@
+.copyright {
+  @include center;
+  height: 80px;
+  margin: 0 30px;
+}
+
+.copyright__text {
+  @include font-set(19px, 20px);
+  color: $black;
+  margin-right: 30px;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+  font-size: 0;
+  background-color: $white;
+}

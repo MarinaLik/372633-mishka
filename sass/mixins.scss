@@ -1,0 +1,34 @@
+@mixin font($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin font-set($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 700;
+}
+
+@mixin font-caps($weight, $size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  text-transform: uppercase;
+}
+
+@mixin indent($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin transition($property, $time, $transition) {
+  transition-property: $property;
+  transition-duration: $time;
+  transition-timing-function: $transition;
+}
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
