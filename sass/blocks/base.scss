@@ -25,16 +25,15 @@ body {
 // Блоки без элементов
 .page-main {
   @include indent;
-  width: 320px;
 }
 
 .catalog {
   @include indent(0, 30px 30px 0);
-  width: 260px;
+  width: 100%;
 }
 
 .promo-text {
   @include font(13px, 24px);
-  color: $color-primary;
   margin: 30px;
+  color: $color-primary;
 }

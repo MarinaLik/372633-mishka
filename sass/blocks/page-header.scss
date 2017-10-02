@@ -1,11 +1,11 @@
 .page-header {
   @include indent;
-  width: 320px;
+  width: 100%;
   background-color: $color-bg;
 }
 
 .page-header__intro {
-  width: 320px;
+  width: 100%;
   margin: 0;
   padding-top: 1px;
 }
@@ -18,7 +18,7 @@
 .page-header__title {
   @include font-set(27px, 30px);
   color: $black;
-  width: 244px;
+  width: 240px;
   margin: 74px auto;
   text-align: center;
 }

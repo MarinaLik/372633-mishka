@@ -5,7 +5,7 @@
   // right: 0;
   // bottom: 0;
   // left: 0;
-  width: 320px;
+  width: 100%;
   padding-top: 35px;
   padding-bottom: 46px;
   background-color: $white;
@@ -17,7 +17,7 @@
   @include font-caps(700, 25px, 30px);
   color: $black;
   display: block;
-  margin: 0 85px;
+  text-align: center;
 }
 
 .modal__form {

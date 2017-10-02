@@ -4,7 +4,7 @@
 }
 
 .reviews__wrap {
-  @include indent(30px, 0);
+  @include indent(30px 0, 0 30px);
 }
 
 .reviews__title {
