@@ -1,0 +1,14 @@
+.page-footer {
+  @include indent;
+  width: 100%;
+  background-color: $color-bg;
+}
+
+.page-footer__social {
+  background-color: $color-bg;
+  border-bottom: $border-line;
+}
+
+.page-footer__copyright {
+  background-color: $color-bg;
+}

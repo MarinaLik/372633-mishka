@@ -1,0 +1,38 @@
+.reviews {
+  @include indent;
+  padding-top: 1px;
+}
+
+.reviews__wrap {
+  @include indent(30px 0, 0 30px);
+}
+
+.reviews__title {
+  @include indent;
+  @include font-set(25px, 30px);
+  color: $black;
+  margin-bottom: 35px;
+}
+
+.reviews__item {
+  @include indent;
+}
+
+.reviews__text {
+  @include indent;
+  @include font(15px, 2);
+}
+
+.reviews__author {
+  display: block;
+  margin-top: 35px;
+  font-style: normal;
+}
+
+.reviews__author-name {
+  @include font-set($font-size, 1.4);
+}
+
+.reviews__hashtag {
+  @include font($font-size, 30px);
+}

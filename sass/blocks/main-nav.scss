@@ -1,0 +1,44 @@
+.main-nav {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 2;
+  top: 29px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+}
+
+.main-nav__list {
+  @include indent;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.main-nav__item {
+  padding: 27px 30px;
+  border-bottom: $border-line;
+}
+
+.main-nav__item:not(:first-child) {
+  // display: none;
+}
+
+.main-nav__item a {
+  @include font-set($font-size, 1.4);
+  padding-left: 46px;
+  color: $black;
+  text-decoration: none;
+}
+
+.main-nav__item--logo {
+  align-self: center;
+  padding: 22px 30px;
+}

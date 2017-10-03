@@ -1,0 +1,24 @@
+.page-header {
+  @include indent;
+  width: 100%;
+  background-color: $color-bg;
+}
+
+.page-header__intro {
+  width: 100%;
+  margin: 0;
+  padding-top: 1px;
+}
+
+.page-header__intro--large {
+  height: 355px;
+  background: $color-bg url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+}
+
+.page-header__title {
+  @include font-set(27px, 30px);
+  color: $black;
+  width: 240px;
+  margin: 74px auto;
+  text-align: center;
+}

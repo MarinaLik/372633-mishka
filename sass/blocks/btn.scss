@@ -1,0 +1,11 @@
+.btn {
+  @include font-caps(700, 17px, 20px);
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+  color: $color-primary;
+  background-color: $white;
+  border: 2px solid $color-primary;
+  text-decoration: none;
+}

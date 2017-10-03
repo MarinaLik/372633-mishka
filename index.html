@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   </head>
   <body>
@@ -13,8 +14,8 @@
         Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
-            <a class="page-header__logo">
-              <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка">
+            <a class="logo">
+              <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
             </a>
           </li>
           <li class="main-nav__item">
@@ -31,7 +32,7 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__intro">
+      <div class="page-header__intro page-header__intro--large">
         <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
       </div>
     </header>
@@ -70,7 +71,7 @@
             </table>
           </div>
           <div class="product-week__image">
-            <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           </div>
           <footer class="product-week__footer">
             <b class="product-week__price">Цена: 990 руб.</b>
@@ -80,7 +81,7 @@
       </article>
       <section class="features">
         <div class="features__wrap">
-          <h2 class="section__title">Коротко о нас:</h2>
+          <h2 class="features__title">Коротко о нас:</h2>
           <ul class="features__list">
             <li class="features__item features__item--flower">Экологически чистые материалы</li>
             <li class="features__item features__item--design">Скандинавский стиль по российской цене</li>
@@ -125,17 +126,20 @@
         </div>
       </section>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__inner">
-          <span class="contacts__label">e-mail:</span>
-          <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
-        <p class="contacts__inner">
-          <span class="contacts__label">адрес:</span>
-          <p class="contacts__text">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</p>
-        </p>
+        <div class="contacts__wrap">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__inner">
+            <span class="contacts__label">e-mail:</span>
+            <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
+          <div class="contacts__inner">
+            <span class="contacts__label">адрес:</span>
+            <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+          </div>
+        </div>
         <div class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1998.6013717087894!2d30.32378603715311!3d59.93875656138258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1506254255754" width="800" height="600" style="border:0" allowfullscreen></iframe>
-          <img class="contacts__map-point" src="http://placehold.it/67x100" width="67" height="100" alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101">
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1998.6013717087894!2d30.32378603715311!3d59.93875656138258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1506254255754" width="800" height="457" style="border:0" allowfullscreen></iframe> -->
+          <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
+          <img class="contacts__map-point" src="img/icon-map-pin.svg" width="67" height="100" alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101">
         </div>
         <a class="contacts__btn btn" href="#">Напишите нам</a>
       </section>
@@ -162,6 +166,7 @@
     <div class="modal">
       <b class="modal__title">Добавить в корзину</b>
       <form class="modal__form" method="post" action="http://echo.htmlacademy.ru/">
+        <p class="modal__caption">Выберите размер:</p>
         <input class="modal__input" type="radio" id="size-s" name="size">
         <label class="modal__label" for="size-s">S</label>
         <input class="modal__input" type="radio" id="size-m" name="size">

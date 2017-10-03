@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include indent;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  word-wrap: break-word;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: 1.4;
+  color: $color-primary;
+  background-color: $white;
+}
+
+.hidden {
+  display: none;
+}
+
+// Блоки без элементов
+.page-main {
+  @include indent;
+}
+
+.catalog {
+  @include indent(0, 30px 30px 0);
+  width: 100%;
+}
+
+.promo-text {
+  @include font(13px, 24px);
+  margin: 30px;
+  color: $color-primary;
+}
