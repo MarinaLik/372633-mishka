@@ -1,3 +1,37 @@
 .logo {
-  margin: 0 auto;
+  width: 86px;
+  height: 35px;
+}
+
+.logo--footer {
+  display: none;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .logo {
+    width: 113px;
+    height: 46px;
+    border: $border-line //временно
+  }
+
+  .logo--footer {
+    display: block;
+    margin: 0;
+    width: 102px;
+    height: 34px;
+    font-size: 0;
+    background-color: $white; //временно
+  }
+}
+
+////
+
+@media (min-width: $mq-large) {
+  .logo {
+    width: 150px;
+    height: 70px;
+    border: $border-line //временно
+  }
 }

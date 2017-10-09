@@ -3,44 +3,58 @@
 }
 
 .order-form__group {
-  margin: 0;
-  padding: 0 30px 30px;
+  @include indent(0, 0 30px 30px);
   border: none;
 }
 
+.order-form__wrap {
+  @include indent;
+}
+
 .order-form__group:last-child {
-  padding-bottom: 0;
+  padding-bottom: 0; //не работает???
 }
 
 .order-form__title {
-  @include font-caps(700, $font-size, 1.4);
-  color: $color-secondery;
+  @include indent;
   padding-right: 27px;
   margin-bottom: 12px;
+  @include font-caps(700, $font-size, 1.4);
+  color: $color-secondery;
 }
 // линия будет псевдоэлементом
 
+//нет еще отступов у order-form__inner
+
+.order-form label {
+  display: inline-block;
+}
+
 .order-form__label-radio {
-  @include font-set($font-size, 18px);
+  @include font-set($font-size, 20px);
   color: $black;
   padding-left: 21px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .order-form__label-check {
-  @include font-set($font-size, 18px);
+  @include font-set($font-size, 20px);
   color: $black;
   padding-left: 23px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .order-form__label {
-  @include font-set($font-size, 18px);
+  @include font-set($font-size, 20px);
   color: $black;
 }
 
 .order-form__input {
-  @include font($font-size, 18px);
-  width: 260px;
-  padding: 16px 1px;
+  @include font($font-size, 20px);
+  width: 258px;
+  padding: 15px 1px;
   border: none;
   border-bottom: 2px solid $black;
 }
@@ -52,7 +66,7 @@
 }
 
 .order-form__footer {
-  margin: 10px 30px 55px;
+  @include indent(10px 30px 55px, 0);
 }
 
 .order-form__caption {
@@ -63,4 +77,148 @@
 .order-form__btn {
   width: 256px;
   margin-top: 30px;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .order-form__group {
+    @include indent(0, 50px);
+  }
+
+  .order-form__group:nth-of-type(even) {
+    background-color: $color-bg;
+  }
+
+  .order-form__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 128px;
+  }
+
+  .order-form__wrap--color,
+  .order-form__wrap--name {
+    height: 204px;
+  }
+
+  .order-form__wrap--name .order-form__inner,
+  .order-form__wrap--contact .order-form__inner {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .order-form__wrap--name .order-form__inner {
+    width: 500px;
+  }
+
+  .order-form__title {
+    width: 138px;
+    margin-bottom: 100px;
+  }
+
+  .order-form__wrap--color .order-form__title,
+  .order-form__wrap--name .order-form__title {
+    margin-bottom: 180px;
+  }
+
+  .order-form__wrap--contact .order-form__title {
+    margin-bottom: 0;
+  }
+
+  .order-form__label-radio {
+    padding-left: 27px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    @include font-set(19px, 21px);
+  }
+
+  .order-form__label-check {
+    padding-left: 27px;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    @include font-set(19px, 21px);
+  }
+
+  .order-form__label {
+    padding-right: 26px;
+    @include font-set(19px, 21px);
+  }
+
+  .order-form__wrap--contact .order-form__label {
+    width: 165px;
+  }
+
+  .order-form__input {
+    width: 100%;
+    @include font(19px, 20px);
+  }
+
+  .order-form__wrap--contact .order-form__input {
+    width: 500px;
+  }
+
+  .order-form__message {
+    width: 496px;
+  }
+
+  .order-form__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    @include indent(50px, 0);
+  }
+
+  .order-form__caption {
+    order: 1;
+    @include font($font-size, 30px);
+  }
+
+  .order-form__btn {
+    width: 226px;
+    margin-top: 0px;
+  }
+}
+
+////
+
+@media (min-width: $mq-large) {
+  .order-form__group {
+    @include indent(0, 50px 110px);
+  }
+
+  .order-form__wrap--color {
+    height: 128px;
+  }
+
+    .order-form__wrap--name .order-form__inner {
+    width: 700px;
+  }
+
+  .order-form__title {
+    width: 86px;
+  }
+
+  .order-form__wrap--color .order-form__title {
+    margin-bottom: 100px;
+  }
+
+  .order-form__wrap--name {
+    margin-right: 115px;
+  }
+
+  .order-form__wrap--contact .order-form__input {
+    width: 700px;
+  }
+
+  .order-form__message {
+    width: 696px;
+  }
+
+  .order-form__footer {
+    @include indent(50px 225px, 0);
+  }
 }

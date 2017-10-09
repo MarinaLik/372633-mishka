@@ -1,12 +1,22 @@
 .catalog-item {
+  @include indent(0 30px 30px, 0);
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-item__image {
+  width: 260px;
+  height: 195px;
   @include indent;
-  margin-bottom: 30px;
 }
 
 .catalog-item__descr {
-  border: $border-line;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 202px;
-  padding: 0 28px;
+  padding: 28px;
+  border: $border-line;
 }
 
 .catalog-item__name {
@@ -14,20 +24,23 @@
 }
 
 .catalog-item__name h2 {
+  @include indent;
   @include font-set($font-size, 1.4);
   color: $black;
 }
 
 .catalog-item__text {
+  @include indent(0, 10px 0 25px);
   @include font(13px, 1.4);
   color: $color-primary;
 }
 
 .catalog-item__order {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  height: 73px;
+  align-items: flex-end;
+  height: 44px;
   border-top: $border-line;
 }
 
@@ -38,8 +51,62 @@
 
 .catalog-item__btn {
   display: inline-block;
-  width: 21px;
-  height: 19px;
+  width: 24px;
+  height: 24px;
   background-color: $color-primary;
   font-size: 0;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .catalog-item {
+    flex-direction: row;
+    @include indent(0 50px 52px, 0);
+  }
+
+// фон временно для видимой границы
+  .catalog-item__image {
+    width: 334px;
+    height: 334px;
+    background-color: #ececec;
+  }
+
+  .catalog-item__descr {
+    width: 276px;
+  }
+
+  .catalog-item__name h2 {
+    @include font-set(20px, 24px);
+  }
+
+  .catalog-item__text {
+    padding-bottom: 5px;
+    @include font(15px, 2);
+  }
+
+  .catalog-item__price {
+    @include font-set($font-size, 1.4);
+  }
+}
+
+////
+
+@media (min-width: $mq-large) {
+  .catalog-item {
+    flex-direction: column;
+    @include indent;
+    margin-bottom: 55px;
+  }
+
+  .catalog-item__image {
+    width: 316px;
+    height: 462px;
+    background-color: #ececec;
+  }
+
+  .catalog-item__descr {
+    width: 258px;
+    height: 139px;
+  }
 }
