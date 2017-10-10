@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
@@ -18,10 +19,10 @@
               <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--catalog">
             <a href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--form">
             <a href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item main-nav__item--search">
@@ -30,21 +31,29 @@
           <li class="main-nav__item main-nav__item--cart">
             <a href="#">Корзина: пока пуста</a>
           </li>
+          <li class="main-nav__item main-nav__item--add">
+            <a href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item main-nav__item--add">
+            <a href="#">Распродажа</a>
+          </li>
         </ul>
       </nav>
       <div class="page-header__intro page-header__intro--large">
+        <p class="page-header__info">Бесплатная доставка по России</p>
         <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
       </div>
     </header>
     <main class="page-main">
       <div class="categories">
         <ul class="categories__list">
-          <li class="categories__item categories__item--interior">
-            <a href="#">Предметы интерьера</a>
-          </li>
-          <li class="categories__item add-menu__item--toys">
-            <a href="#">Детские игрушки</a>
-          </li>
+          <a href="#">
+            <li class="categories__item categories__item--interior">Предметы интерьера
+            </li>
+          </a>
+          <a href="#">
+            <li class="categories__item add-menu__item--toys">Детские игрушки</li>
+          </a>
         </ul>
       </div>
       <article class="product-week">
@@ -145,6 +154,7 @@
       </section>
     </main>
     <footer class="page-footer">
+      <a class="logo logo--footer" href="index.html">Логотип</a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -167,12 +177,14 @@
       <b class="modal__title">Добавить в корзину</b>
       <form class="modal__form" method="post" action="http://echo.htmlacademy.ru/">
         <p class="modal__caption">Выберите размер:</p>
-        <input class="modal__input" type="radio" id="size-s" name="size">
-        <label class="modal__label" for="size-s">S</label>
-        <input class="modal__input" type="radio" id="size-m" name="size">
-        <label class="modal__label" for="size-m">M</label>
-        <input class="modal__input" type="radio" id="size-l" name="size">
-        <label class="modal__label" for="size-l">L</label>
+        <div class="modal__inner">
+          <input class="modal__input" type="radio" id="size-s" name="size">
+          <label class="modal__label" for="size-s">S</label>
+          <input class="modal__input" type="radio" id="size-m" name="size">
+          <label class="modal__label" for="size-m">M</label>
+          <input class="modal__input" type="radio" id="size-l" name="size">
+          <label class="modal__label" for="size-l">L</label>
+        </div>
         <button class="modal__btn btn" type="submit">Добавить</button>
       </form>
     </div>

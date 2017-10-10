@@ -1,13 +1,10 @@
 .main-nav {
   position: relative;
-  z-index: 1;
-  margin: 0 auto;
-  background-color: $white;
 }
 
 .main-nav__toggle {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   top: 29px;
   right: 30px;
   width: 20px;
@@ -18,27 +15,136 @@
 .main-nav__list {
   @include indent;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 2;
   list-style: none;
 }
 
 .main-nav__item {
+  width: 320px;
   padding: 27px 30px;
+  box-sizing: border-box;
+  @include font-set($font-size, 1.4);
   border-bottom: $border-line;
+  background-color: $white;
 }
 
-.main-nav__item:not(:first-child) {
-  // display: none;
+.main-nav__item {
+  display: none;
 }
 
 .main-nav__item a {
-  @include font-set($font-size, 1.4);
-  padding-left: 46px;
+  padding-left: 30px;
   color: $black;
   text-decoration: none;
 }
 
 .main-nav__item--logo {
-  align-self: center;
+  display: block;
   padding: 22px 30px;
+  text-align: center;
+}
+
+.main-nav__item--logo a {
+  padding-left: 0;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    padding: 0 50px;
+  }
+
+  .main-nav__item {
+    display: block;
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .main-nav__item--logo {
+    width: 322px;
+    padding: 22px 0 20px;
+    text-align: left;
+  }
+
+  .main-nav__item--catalog,
+  .main-nav__item--form {
+    width: 167px;
+    padding: 20px 0;
+    text-align: left;
+    @include font-set(15px, 24px);
+  }
+
+  .main-nav__item--catalog {
+    order: 4;
+  }
+
+  .main-nav__item--form {
+    order: 5;
+  }
+
+  .main-nav__item--catalog a,
+  .main-nav__item--form a,
+  .main-nav__item--add a {
+    padding-left: 0;
+  }
+
+  .main-nav__item--search {
+    width: 82px;
+    font-size: 0;
+    border-left: $border-line;
+    border-right: $border-line;
+  }
+
+  .main-nav__item--cart {
+    width: 249px;
+    padding: 32px 0;
+    text-align: right;
+  }
+
+  .main-nav__item--add {
+    display: none;
+  }
+}
+
+////
+
+@media (min-width: $mq-large) {
+  .main-nav__item--logo {
+    width: 150px;
+    margin: auto;
+  }
+
+  .main-nav__item--catalog,
+  .main-nav__item--form {
+    width: 220px;
+    padding: 32px 0;
+    @include font-set($font-size, 1.4);
+}
+
+  .main-nav__item--catalog {
+    order: -2;
+  }
+
+  .main-nav__item--form {
+    order: -1;
+  }
+
+  .main-nav__item--cart {
+    width: 266px;
+  }
+
+  .main-nav__item--add {
+    display: block;
+    width: 220px;
+    padding: 20px 0;
+    text-align: left;
+    @include font-set(15px, 24px);
+  }
 }

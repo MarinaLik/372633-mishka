@@ -1,13 +1,14 @@
 .page-header {
   @include indent;
   width: 100%;
-  background-color: $color-bg;
 }
 
 .page-header__intro {
   width: 100%;
+  height: 176px;
   margin: 0;
-  padding-top: 1px;
+  border-top: $border-line;
+  background-color: $color-bg;
 }
 
 .page-header__intro--large {
@@ -15,10 +16,56 @@
   background: $color-bg url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
 }
 
+.page-header__info {
+  display: none;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 50px 20px 350px;
+  @include font(15px, 24px);
+  color: $color-primary;
+  text-align: right;
+}
+
 .page-header__title {
   @include font-set(27px, 30px);
   color: $black;
   width: 240px;
-  margin: 74px auto;
+  margin: 74px auto 0;
   text-align: center;
+}
+
+@media (min-width: $mq-medium) {
+  .page-header__intro {
+    height: 225px;
+    margin-top: -64px;
+  }
+
+  .page-header__intro--large {
+    height: 745px;
+  }
+
+  .page-header__info {
+    display: block;
+  }
+
+  .page-header__title {
+    width: 500px;
+    margin-top: 39px;
+    @include font-set(43px, 50px);
+  }
+}
+
+@media (min-width: $mq-large) {
+  .page-header__intro {
+    height: 254px;
+  }
+
+  .page-header__intro--large {
+    height: 745px;
+  }
+
+  .page-header__title {
+    width: 615px;
+    @include font-set(53px, 57px);
+  }
 }

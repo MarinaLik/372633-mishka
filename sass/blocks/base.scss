@@ -6,9 +6,11 @@ body {
 body {
   @include indent;
   min-width: 320px;
+  max-width: 1150px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
   position: relative;
   word-wrap: break-word;
   font-family: $font-family;
@@ -28,12 +30,46 @@ body {
 }
 
 .catalog {
-  @include indent(0, 30px 30px 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  @include indent;
+  padding-top: 30px;
 }
 
 .promo-text {
   @include font(13px, 24px);
-  margin: 30px;
+  @include indent(24px 30px, 0);
   color: $color-primary;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .catalog {
+    padding-top: 78px;
+    width: 100%;
+  }
+
+  .promo-text {
+    @include font($font-size, 30px);
+    @include indent(80px 50px 10px, 0);
+  }
+}
+
+////
+
+@media (min-width: $mq-large) {
+  .catalog {
+    width: 1050px;
+    @include indent(0, 128px 50px 0);
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .promo-text {
+    @include indent(122px 250px 10px 225px, 0);
+  }
 }

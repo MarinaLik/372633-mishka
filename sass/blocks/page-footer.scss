@@ -1,14 +1,25 @@
 .page-footer {
-  @include indent;
-  width: 100%;
+  @include indent(0, 0 30px);
+  width: auto;
   background-color: $color-bg;
 }
 
 .page-footer__social {
   background-color: $color-bg;
-  border-bottom: $border-line;
 }
 
 .page-footer__copyright {
   background-color: $color-bg;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 50px;
+  }
 }

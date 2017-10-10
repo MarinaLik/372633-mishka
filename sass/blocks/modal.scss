@@ -6,28 +6,35 @@
   // bottom: 0;
   // left: 0;
   width: 100%;
-  padding-top: 35px;
-  padding-bottom: 46px;
+  @include indent(0, 33px 0 45px);
   background-color: $white;
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
 }
 
 .modal__title {
+  display: block;
+  @include indent(0 55px, 0);
+  text-align: center;
   @include font-caps(700, 25px, 30px);
   color: $black;
-  display: block;
-  text-align: center;
 }
 
 .modal__form {
-  margin: 0 30px;
+  @include indent(0 auto, 0);
+  width: 260px;
 }
 
 .modal__caption {
+  @include indent(0, 17px 0 19px);
   @include font(15px, 30px);
   color: $color-primary;
   text-align: center;
+}
+
+.modal__inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal__input {
@@ -35,20 +42,49 @@
 }
 
 .modal__label {
-  @include font-set($font-size, 20px);
+  @include font-set($font-size, 48px);
   color: $color-primary;
-  display: inline-block;
   width: 78px;
   height: 48px;
   text-align: center;
-  vertical-align: middle;
   background-color: $white;
   border: 2px solid $color-secondery;
 }
 
 .modal__btn {
-  margin-top: 30px;
+  width: 260px;
+  margin: 30px auto 0;
   color: $white;
   background-color: $color-secondery;
   border: none;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .modal {
+    width: 564px;
+    padding-top: 36px;
+  }
+
+  .modal__title {
+    margin: 0 auto;
+    @include font-caps(700, 30px, 57px);
+  }
+
+  .modal__form {
+    width: 350px;
+  }
+
+  .modal__caption {
+    @include font(17px, 30px);
+  }
+
+  .modal__label {
+    width: 108px;
+  }
+
+  .modal__btn {
+    width: 350px;
+  }
 }

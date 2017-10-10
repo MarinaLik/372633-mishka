@@ -7,19 +7,42 @@
   list-style: none;
 }
 
-.categories__item {
-  @include indent;
-}
-
-.categories__item a {
-  @include font-set(19px, 24px);
+.categories__list a {
   display: block;
-  padding: 27px 160px 27px 30px;
-  color: $white;
-  background-color: $color-secondery;
+  width: 100%;
   text-decoration: none;
+  background-color: $color-secondery;
 }
 
-.categories__item:last-child a {
+.categories__list a:last-child {
   background-color: #56c3b2;
+}
+
+.categories__item {
+  width: 130px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 30px;
+  margin-right: auto;
+  @include font-set(19px, 24px);
+  color: $white;
+  background-color: transparent;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .categories {
+    margin: -119px 50px 0;
+}
+
+  .categories__list {
+    display: flex;
+  }
+
+  .categories__item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include font-set(20px, 30px);
+  }
 }
