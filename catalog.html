@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="main-nav__toggle-inner"></span>
-        Открыть меню</button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button" title="Меню">
+          <span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
-            <a class="logo" href="index.html">
+            <a class="logo logo--header" href="index.html">
               <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
             </a>
           </li>
@@ -26,10 +25,10 @@
             <a href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item main-nav__item--search">
-            <a href="#">Поиск по сайту</a>
+            <a href="#"><img src="#" width="21" height="18">Поиск по сайту</a>
           </li>
           <li class="main-nav__item main-nav__item--cart">
-            <a href="#">Корзина: пока пуста</a>
+            <a href="#"><img src="#" width="21" height="18">Корзина: пока пуста</a>
           </li>
           <li class="main-nav__item main-nav__item--add">
             <a href="#">Новые поступления</a>
@@ -46,7 +45,7 @@
     </header>
     <main class="page-main">
       <section class="catalog">
-        <article class="catalog-item">
+        <article class="catalog-item" tabindex="0">
           <a class="catalog-item__image" href="#">
             <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
           </a>
@@ -59,11 +58,12 @@
             </div>
             <div class="catalog-item__order">
               <b class="catalog-item__price">1 200 руб.</b>
-              <a class="catalog-item__btn">Купить</a>
+              <a class="catalog-item__btn" title="Купить">
+              <img src="#" width="21" height="18">Купить</a>
             </div>
           </div>
         </article>
-        <article class="catalog-item">
+        <article class="catalog-item" tabindex="0">
           <a class="catalog-item__image" href="#">
             <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
           </a>
@@ -76,11 +76,12 @@
             </div>
             <div class="catalog-item__order">
               <b class="catalog-item__price">690 руб.</b>
-              <a class="catalog-item__btn">Купить</a>
+              <a class="catalog-item__btn" title="Купить">
+                <img src="#" width="21" height="18">Купить</a>
             </div>
           </div>
         </article>
-        <article class="catalog-item">
+        <article class="catalog-item" tabindex="0">
           <a class="catalog-item__image" href="#">
             <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
           </a>
@@ -93,13 +94,17 @@
             </div>
             <div class="catalog-item__order">
               <b class="catalog-item__price">1 500 руб.</b>
-              <a class="catalog-item__btn">Купить</a>
+              <a class="catalog-item__btn" title="Купить">
+                <img src="#" width="21" height="18">Купить</a>
             </div>
           </div>
         </article>
       </section>
-      <section class="production">
-        <h2 class="production__title">Процесс производства</h2>
+      <section class="production" tabindex="0">
+        <div class="production__top">
+          <img src="#" width="32" height="22">
+          <h2 class="production__title">Процесс производства</h2>
+        </div>
         <div class="production__player">
           <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
           <button class="production__player-btn">Воспроизвести</button>
@@ -111,23 +116,30 @@
       </section>
     </main>
     <footer class="page-footer">
-      <a class="logo logo--footer" href="index.html">Логотип</a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#" target="_blank">Мы в Инстаграме</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#" target="_blank">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#" target="_blank">Мы в Твиттере</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      <div class="page-footer__wrap">
+        <a class="logo logo--footer">
+          <img src="img/logo-mobile.svg" width="102" height="34" alt="Мишка"></a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#" target="_blank" title="Инстаграм">
+                <img src="#" width="22" height="21">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#" target="_blank" title="Фейсбук">
+                <img src="#" width="15" height="29">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#" target="_blank" title="Твиттер">
+                <img src="#" width="24" height="20">Мы в Твиттере</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <img src="#" width="27" height="34">HTML Academy</a>
+        </div>
       </div>
     </footer>
     <div class="modal">
@@ -145,5 +157,6 @@
         <button class="modal__btn btn" type="submit">Добавить</button>
       </form>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
