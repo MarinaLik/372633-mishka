@@ -8,4 +8,16 @@
   background-color: $white;
   border: 2px solid $color-primary;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: $white;
+  background-color: #464646;
+}
+
+.btn:active {
+  color: rgba($white, 0.3);
+  background-color: #464646;
 }

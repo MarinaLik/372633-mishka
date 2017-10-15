@@ -1,16 +1,33 @@
 .production {
-  display: flex;
-  flex-direction: column;
   margin: 0 30px 58px;
   padding: 0;
   border: $border-line;
+  outline: none;
+}
+
+.production:hover,
+.production:focus {
+  box-shadow: 0 6px 10px rgba($black, 0.1);
+}
+
+.production:active {
+  box-shadow: 0 3px 5px rgba($black, 0.1);
+}
+
+.production__top {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px;
+}
+
+.production__top img {
+  padding-right: 25px;
 }
 
 .production__title {
+  @include indent;
   @include font-set($font-size, 1.4);
   color: $black;
-  margin: 25px 30px;
-  padding-left: 60px;
 }
 
 .production__player {
@@ -48,7 +65,10 @@
 
 @media (min-width: $mq-medium) {
   .production {
-    margin: 0 50px 63px;
+    display: flex;
+    flex-direction: column;
+    max-width: 666px;
+    margin: 0 auto 63px;
     padding: 0;
   }
 
@@ -59,10 +79,17 @@
     background-color: #ececec;
   }
 
+  .production__top {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .production__top img {
+    padding-right: 32px;
+  }
+
   .production__title {
     @include font-set(20px, 24px);
-    margin: 40px;
-    padding-left: 67px;
   }
 
   .production__descr {
@@ -78,29 +105,53 @@
 
 @media (min-width: $mq-large) {
   .production {
+    position: relative;
     flex-wrap: wrap;
-    align-items: stretch;
-    height: 453px;
-  }
-
-  .production__title {
-    width: 230px;
-    padding-left: 0;
-    padding-top: 60px;
+    align-items: flex-end;
+    max-width: 1050px;
+    margin: 0 auto;
+    margin-bottom: 105px;
   }
 
   .production__player {
-    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 680px;
     height: 453px;
     background-color: #ececec;
   }
 
-  .production__descr {
+  .production__top {
+    display: block;
+    width: 33%;
+    padding: 47px 0 33px;
+  }
+
+  .production__top img {
+    display: block;
+    margin-left: 60px;
+    margin-bottom: 28px;
+  }
+
+  .production__title {
     width: 230px;
+    margin-left: 60px;
+  }
+
+  .production__descr {
+    width: 33%;
+    margin: 0;
+    margin-bottom: 60px;
   }
 
   .production__text {
-    margin-bottom: 44px;
+    margin-left: 60px;
+    margin-bottom: 43px;
+  }
+
+  .production__btn {
+    width: 226px;
+    margin-left: 60px;
   }
 }

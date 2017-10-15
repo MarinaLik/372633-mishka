@@ -1,17 +1,18 @@
 .features {
   @include indent;
-  border-top: $border-line;
 }
 
 .features__wrap {
   @include indent(0, 30px);
+  padding-bottom: 0;
+  border-top: $border-line;
 }
 
 .features__title {
   @include indent;
+  margin-bottom: 30px;
   @include font-set(25px, 30px);
   color: $black;
-  margin-bottom: 30px;
 }
 
 .features__list {
@@ -20,7 +21,9 @@
 }
 
 .features__item {
-  @include indent(0, 58px 45px 30px 0);
+  @include indent;
+  margin-bottom: 30px;
+  padding-right: 45px;
   @include font-set($font-size, 20px);
   color: $black;
 }
@@ -29,8 +32,9 @@
   padding-right: 0;
 }
 
-.features__item:last-child {
-  padding-bottom: 0;
+.features__item img {
+  display: block;
+  margin-bottom: 18px;
 }
 
 ////
@@ -38,60 +42,60 @@
 @media (min-width: $mq-medium) {
   .features__wrap {
     @include indent(0, 50px);
+    padding-bottom: 0;
   }
 
   .features__title {
-    @include font-set(43px, 50px);
     margin-bottom: 40px;
+    @include font-set(43px, 50px);
   }
 
   .features__list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     flex-wrap: wrap;
-    height: 420px;
   }
 
   .features__item {
+    width: 40%;
+    padding-right: 10%;
+    margin-bottom: 55px;
     @include font-set(20px, 22px);
-    width: 254px;
-    padding-right: 80px;
-    padding-bottom: 50px;
   }
 
-  .features__item:nth-child(3n) {
-    padding-bottom: 0;
+  .features__item--design {
+    order: 1;
   }
 
   .features__item--rocket {
-    width: 334px;
+    order: 2;
+    width: 50%;
     padding-right: 0;
+  }
+
+  .features__item--heart {
+    order: 3;
+  }
+
+  .features__item--gift {
+    order: 4;
   }
 }
 
 ////
 
 @media (min-width: $mq-large) {
+  .features {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
   .features__wrap {
+    max-width: 700px;
     @include indent(0 50px, 70px 175px);
+    padding-bottom: 20px;
   }
 
   .features__title {
     @include font-set(53px, 57px);
-  }
-
-  .features__item {
-    width: 250px;
-    padding-right: 100px;
-  }
-
-  .features__item:nth-child(3n) {
-    padding-bottom: 0;
-  }
-
-  .features__item--rocket {
-    width: 350px;
-    padding-right: 0;
   }
 }
