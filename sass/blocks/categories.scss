@@ -40,6 +40,7 @@
 .categories__name {
   display: block;
   width: 130px;
+
   @include font-set(19px, 24px);
   color: $white;
   background-color: transparent;
@@ -54,7 +55,7 @@
 @media (min-width: $mq-medium) {
   .categories {
     margin-top: -119px;
-}
+  }
 
   .categories__list {
     display: flex;

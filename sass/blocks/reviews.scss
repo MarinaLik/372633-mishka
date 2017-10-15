@@ -10,6 +10,7 @@
 .reviews__title {
   @include indent;
   margin-bottom: 35px;
+
   @include font-set(25px, 30px);
   color: $black;
 }
@@ -31,6 +32,7 @@
 
 .reviews__author-name {
   display: block;
+
   @include font-set($font-size, 1.4);
 }
 
@@ -53,6 +55,7 @@
     order: -2;
     width: 40%;
     margin-bottom: 50px;
+
     @include font-set(43px, 50px);
   }
 
@@ -91,6 +94,7 @@
 
   .reviews__title {
     margin-bottom: 60px;
+
     @include font-set(53px, 57px);
   }
 

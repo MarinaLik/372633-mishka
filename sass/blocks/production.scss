@@ -48,6 +48,18 @@
   background-image: url("../img/icon-play.svg");
   border: none;
   font-size: 0;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2) translate(-50%, -50%);
+  }
+
+  &:active {
+    transform: scale(0.8) translate(-50%, -50%);
+    opacity: 0.3;
+  }
 }
 
 .production__descr {

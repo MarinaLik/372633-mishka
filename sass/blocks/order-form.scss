@@ -15,8 +15,10 @@
 .order-form__title {
   position: relative;
   display: block;
+
   @include indent;
   margin-bottom: 23px;
+
   @include font-caps(700, $font-size, 18px);
   color: $color-secondery;
 }
@@ -55,12 +57,9 @@
   display: block;
   padding-left: 60px;
   padding-top: 12px;
+
   @include font-set($font-size, 18px);
   color: $black;
-}
-
-.order-form__label-check {
-  padding-bottom: 12px;
 }
 
 .order-form__label-radio {
@@ -74,6 +73,7 @@
     border: 2px solid $color-primary;
     border-radius: 50%;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -88,10 +88,12 @@
 }
 
 .order-form__input-radio:checked + .order-form__label-radio::after {
-    display: block;
-  }
+  display: block;
+}
 
 .order-form__label-check {
+  padding-bottom: 12px;
+
   &::before {
     content: "";
     position: absolute;
@@ -101,6 +103,7 @@
     height: 38px;
     border: 2px solid $color-primary;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -117,21 +120,21 @@
 }
 
 .order-form__input-check:checked + .order-form__label-check::after {
-    display: block;
+  display: block;
   }
 
-  .order-form__input-radio:hover + .order-form__label-radio::before,
-  .order-form__input-radio:focus + .order-form__label-radio::before,
-  .order-form__input-check:hover + .order-form__label-check::before,
-  .order-form__input-check:focus + .order-form__label-check::before {
-    border-color: $color-form;
-  }
+.order-form__input-radio:hover + .order-form__label-radio::before,
+.order-form__input-radio:focus + .order-form__label-radio::before,
+.order-form__input-check:hover + .order-form__label-check::before,
+.order-form__input-check:focus + .order-form__label-check::before {
+  border-color: $color-form;
+}
 
-  .order-form__input-radio:active + .order-form__label-radio::before,
-  .order-form__input-check:active + .order-form__label-check::before {
-    border-color: $color-primary;
-    opacity: 0.3;
-  }
+.order-form__input-radio:active + .order-form__label-radio::before,
+.order-form__input-check:active + .order-form__label-check::before {
+  border-color: $color-primary;
+  opacity: 0.3;
+}
 
 .order-form__wrap--name {
   padding-bottom: 10px;
@@ -158,6 +161,7 @@
 .order-form__input {
   width: 99%;
   padding: 15px 1px;
+
   @include font($font-size, 18px);
   color: $color-primary;
   border: none;
@@ -199,6 +203,7 @@
   width: 85%;
   height: 104px;
   padding: 17px;
+
   @include font($font-size, 18px);
   color: $color-primary;
   border: 2px solid $color-primary;
@@ -253,7 +258,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    @include indent(0, 50px)
+
+    @include indent(0, 50px);
     padding-bottom: 28px;
   }
 
@@ -297,49 +303,51 @@
     padding-left: 80px;
     padding-top: 17px;
     padding-bottom: 17px;
-    @include font-set(19px, 21px);
-  }
 
-  .order-form__label-radio {
-  &::before {
-    width: 50px;
-    height: 50px;
+    @include font-set(19px, 21px);
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 15px;
+      width: 24px;
+      height: 24px;
+    }
   }
-  &::after {
-    top: 15px;
-    left: 15px;
-    width: 24px;
-    height: 24px;
-  }
-}
 
   .order-form__label-check {
     padding-left: 80px;
     padding-top: 16px;
     padding-bottom: 15px;
-    @include font-set(19px, 21px);
-  }
 
-  .order-form__label-check {
-  &::before {
-    width: 50px;
-    height: 50px;
+    @include font-set(19px, 21px);
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 13px;
+      width: 28px;
+      height: 14px;
+    }
   }
-  &::after {
-    top: 15px;
-    left: 13px;
-    width: 28px;
-    height: 14px;
-  }
-}
 
   .order-form__label {
     padding-right: 26px;
+
     @include font-set(19px, 21px);
   }
 
   .order-form__input {
     padding: 15px 17px;
+
     @include font(19px, 20px);
   }
 
@@ -357,18 +365,20 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
     @include indent(50px, 0);
     margin-top: 25px;
   }
 
   .order-form__caption {
     order: 1;
+
     @include font($font-size, 30px);
   }
 
   .order-form__btn {
     width: 230px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -407,6 +417,7 @@
 
   .order-form__footer {
     max-width: 700px;
+
     @include indent(22px auto 50px, 0 175px);
   }
 }

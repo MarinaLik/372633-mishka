@@ -7,9 +7,9 @@
   display: inline-block;
   margin-right: 30px;
   vertical-align: middle;
+
   @include font-set(19px, 20px);
   color: $black;
-
 }
 
 .copyright__link {
@@ -23,7 +23,7 @@
 
 ////
 
-@media (min-width: $mq-medium)  {
+@media (min-width: $mq-medium) {
   .copyright {
     text-align: right;
   }

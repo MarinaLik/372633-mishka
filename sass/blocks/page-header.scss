@@ -28,8 +28,8 @@
 }
 
 .page-header__intro--large .page-header__title {
-    width: 245px;
-    margin-top: 90px;
+  width: 245px;
+  margin-top: 90px;
 }
 
 @media (min-width: $mq-medium) {
@@ -47,6 +47,7 @@
     max-width: 100%;
     margin: 0 auto;
     padding: 20px 50px 20px 350px;
+
     @include font(15px, 24px);
     color: $color-primary;
     text-align: right;
@@ -54,6 +55,7 @@
 
   .page-header__title {
     margin-top: 39px;
+
     @include font-set(43px, 50px);
   }
 

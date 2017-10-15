@@ -7,6 +7,7 @@
   display: block;
   width: 260px;
   height: 195px;
+
   @include indent;
 }
 
@@ -78,6 +79,7 @@
 @media (min-width: $mq-medium) {
   .catalog-item {
     display: flex;
+
     @include indent(0 auto 52px, 0 50px);
   }
 
@@ -101,6 +103,7 @@
 
   .catalog-item__text {
     padding-bottom: 5px;
+
     @include font(15px, 2);
   }
 
@@ -114,6 +117,7 @@
 @media (min-width: $mq-large) {
   .catalog-item {
     flex-direction: column;
+
     @include indent;
     margin-bottom: 55px;
   }

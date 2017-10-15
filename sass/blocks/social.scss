@@ -5,6 +5,7 @@
 .social__list {
   display: flex;
   justify-content: center;
+
   @include indent;
   list-style: none;
 }

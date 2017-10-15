@@ -47,6 +47,7 @@
 
 .contacts__text {
   width: 70%;
+
   @include indent;
   @include font(15px, 30px);
 }
@@ -75,6 +76,7 @@
   .contacts__wrap {
     display: flex;
     flex-wrap: wrap;
+
     @include indent(0 50px, 70px 0 54px);
   }
 
@@ -87,6 +89,7 @@
 
   .contacts__title {
     align-self: center;
+
     @include font-set(43px, 50px);
   }
 
@@ -106,6 +109,7 @@
 
   .contacts__link {
     align-self: flex-start;
+
     @include font($font-size, 30px);
   }
 
@@ -125,12 +129,14 @@
   .contacts {
     position: relative;
     max-width: 1050px;
+
     @include indent(70px auto 105px, 0 50px);
   }
 
   .contacts__wrap {
     flex-direction: column;
     width: 50%;
+
     @include indent;
     padding-top: 78px;
   }
@@ -142,6 +148,7 @@
 
   .contacts__title {
     width: 66%;
+
     @include font-set(53px, 57px);
   }
 
@@ -163,7 +170,7 @@
     width: 525px;
   }
 
-    .contacts__btn {
+  .contacts__btn {
     width: 226px;
     margin: 35px 0 0 175px;
   }

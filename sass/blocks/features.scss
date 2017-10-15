@@ -11,6 +11,7 @@
 .features__title {
   @include indent;
   margin-bottom: 30px;
+
   @include font-set(25px, 30px);
   color: $black;
 }
@@ -24,6 +25,7 @@
   @include indent;
   margin-bottom: 30px;
   padding-right: 45px;
+
   @include font-set($font-size, 20px);
   color: $black;
 }
@@ -47,6 +49,7 @@
 
   .features__title {
     margin-bottom: 40px;
+
     @include font-set(43px, 50px);
   }
 
@@ -59,6 +62,7 @@
     width: 40%;
     padding-right: 10%;
     margin-bottom: 55px;
+
     @include font-set(20px, 22px);
   }
 
@@ -91,6 +95,7 @@
 
   .features__wrap {
     max-width: 700px;
+
     @include indent(0 50px, 70px 175px);
     padding-bottom: 20px;
   }

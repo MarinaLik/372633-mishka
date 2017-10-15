@@ -1,22 +1,25 @@
 .modal {
   display: none;
-  // position: fixed;
-  // z-index: 10;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   width: 100%;
+
   @include indent(0, 33px 0 45px);
   background-color: $white;
   border: 1px solid #c6c6c6;
-  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25),
+  0 0 100vw 100vh rgba($white, 0.9);
 }
 
 .modal__title {
   display: block;
+
   @include indent(0 55px, 0);
   text-align: center;
+
   @include font-caps(700, 25px, 30px);
   color: $black;
 }
@@ -49,7 +52,16 @@
   height: 48px;
   text-align: center;
   background-color: $white;
-  border: 2px solid $color-secondery;
+  border: 2px solid rgba($color-primary, 0.1);
+}
+
+.modal__input:hover + .modal__label,
+.modal__input:focus + .modal__label {
+  border-color: rgba($color-primary, 0.3);
+}
+
+.modal__input:checked + .modal__label {
+  border-color: $color-form;
 }
 
 .modal__btn {
@@ -64,12 +76,15 @@
 
 @media (min-width: $mq-medium) {
   .modal {
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 564px;
     padding-top: 36px;
   }
 
   .modal__title {
     margin: 0 auto;
+
     @include font-caps(700, 30px, 57px);
   }
 
