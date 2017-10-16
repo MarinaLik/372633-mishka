@@ -1,18 +1,30 @@
 .copyright {
-  @include center;
-  height: 80px;
-  // margin: 0 30px;
+  padding: 23px 0;
+  text-align: center;
 }
 
 .copyright__text {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;
+
   @include font-set(19px, 20px);
   color: $black;
-  margin-right: 30px;
 }
 
 .copyright__link {
+  display: inline-block;
+  vertical-align: middle;
   width: 27px;
   height: 34px;
   font-size: 0;
   background-color: $white;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .copyright {
+    text-align: right;
+  }
 }

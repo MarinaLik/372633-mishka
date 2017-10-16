@@ -3,17 +3,17 @@
 }
 
 .social__list {
+  display: flex;
+  justify-content: center;
+
   @include indent;
-  @include center;
-  height: 79px;
   list-style: none;
 }
 
 // временные стили для иконок
 .social__item {
+  @include indent(24px 0, 0);
   margin-right: 20px;
-  width: 30px;
-  height: 30px;
   background-color: $white;
 }
 
@@ -22,5 +22,16 @@
 }
 
 .social__link {
+  display: block;
+  width: 30px;
+  height: 30px;
   font-size: 0;
+}
+
+////
+
+@media (min-width: $mq-medium) {
+  .social {
+    border: none;
+  }
 }

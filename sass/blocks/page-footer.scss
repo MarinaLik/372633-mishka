@@ -1,7 +1,11 @@
 .page-footer {
-  @include indent(0, 0 30px);
-  width: auto;
+  @include indent;
+  width: 100%;
   background-color: $color-bg;
+}
+
+.page-footer__wrap {
+  @include indent(0, 0 30px);
 }
 
 .page-footer__social {
@@ -15,11 +19,27 @@
 ////
 
 @media (min-width: $mq-medium) {
-  .page-footer {
+  .page-footer__wrap {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 31px 50px;
+  }
+
+  .page-footer__social {
+    width: 33%;
+  }
+
+  .page-footer__copyright {
+    width: 33%;
+  }
+}
+
+////
+
+@media (min-width: $mq-large) {
+  .page-footer__wrap {
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }

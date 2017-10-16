@@ -1,14 +1,26 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  @include indent;
+  @include indent(0 auto, 0);
   min-width: 320px;
-  max-width: 1150px;
   min-height: 100vh;
-  margin: 0 auto;
   // display: flex;
   // flex-direction: column;
   position: relative;
@@ -20,20 +32,33 @@ body {
   background-color: $white;
 }
 
-.hidden {
-  display: none;
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-// Блоки без элементов
+// Блоки без элементов по БЭМ
 .page-main {
   @include indent;
+  width: 100%;
 }
 
 .catalog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
+
   @include indent;
   padding-top: 30px;
 }
@@ -44,17 +69,36 @@ body {
   color: $color-primary;
 }
 
+.icon-phone {
+  position: absolute;
+  right: 8px;
+  bottom: 15px;
+}
+
+.icon-mail {
+  position: absolute;
+  right: 4px;
+  bottom: 10px;
+}
+
 ////
 
 @media (min-width: $mq-medium) {
   .catalog {
     padding-top: 78px;
-    width: 100%;
   }
 
   .promo-text {
-    @include font($font-size, 30px);
     @include indent(80px 50px 10px, 0);
+    @include font($font-size, 30px);
+  }
+
+  .icon-phone {
+    right: 26px;
+  }
+
+  .icon-mail {
+    right: 22px;
   }
 }
 
@@ -62,14 +106,27 @@ body {
 
 @media (min-width: $mq-large) {
   .catalog {
-    width: 1050px;
-    @include indent(0, 128px 50px 0);
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: stretch;
+    width: 1050px;
+
+    @include indent(0 auto, 128px 50px 0);
   }
 
   .promo-text {
-    @include indent(122px 250px 10px 225px, 0);
+    max-width: 675px;
+    margin: 122px auto 10px;
+    padding-left: 175px;
+    padding-right: 200px;
+  }
+
+  .icon-phone {
+    right: 8px;
+  }
+
+  .icon-mail {
+    right: 4px;
   }
 }

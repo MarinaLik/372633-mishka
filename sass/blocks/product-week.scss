@@ -23,10 +23,11 @@
 }
 
 .product-week__text {
-  @include font(15px, 24px);
-  color: $color-primary;
   margin-top: 0;
   margin-bottom: 30px;
+
+  @include font(15px, 24px);
+  color: $color-primary;
 }
 
 .product-week__table {
@@ -52,10 +53,11 @@
 }
 
 .product-week__price {
-  @include font-set(17px, 1.4);
-  color: $color-primary;
   display: block;
   text-align: center;
+
+  @include font-set(17px, 1.4);
+  color: $color-primary;
 }
 
 .product-week__btn {
@@ -67,7 +69,8 @@
 @media (min-width: $mq-medium) {
   .product-week__wrap {
     position: relative;
-    @include indent(0, 50px);
+
+    @include indent(0 auto, 50px);
   }
 
   .product-week__header {
@@ -77,6 +80,8 @@
   }
 
   .product-week__title {
+    z-index: 5;
+
     @include font-set(43px, 50px);
   }
 
@@ -84,6 +89,7 @@
     width: 72px;
     margin-right: 28px;
     margin-top: 5px;
+
     @include font-caps(700, 17px, 20px);
   }
 
@@ -92,12 +98,14 @@
   }
 
   .product-week__text {
-  @include font($font-size, 30px);
-  margin-bottom: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @include font($font-size, 30px);
   }
 
   .product-week__table {
-    width: 100%;
+    width: 292px;
     margin-bottom: 50px;
   }
 
@@ -122,21 +130,21 @@
 
   .product-week__btn {
     margin-top: 25px;
-}
+  }
 }
 
 ////
 
 @media (min-width: $mq-large) {
   .product-week__wrap {
+    max-width: 1050px;
     padding-top: 130px;
     padding-bottom: 75px;
   }
 
   .product-week__header {
-    position: relative;
-    z-index: 5;
     justify-content: flex-start;
+    z-index: 5;
   }
 
   .product-week__title {
@@ -160,6 +168,7 @@
   .product-week__table {
     margin-bottom: 96px;
   }
+
   .product-week__image {
     top: 70px;
     width: 525px;

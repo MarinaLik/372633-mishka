@@ -3,66 +3,234 @@
 }
 
 .order-form__group {
-  @include indent(0, 0 30px 30px);
+  @include indent;
   border: none;
 }
 
 .order-form__wrap {
-  @include indent;
-}
-
-.order-form__group:last-child {
-  padding-bottom: 0; //не работает???
+  @include indent(0, 0 30px);
+  padding-bottom: 33px;
 }
 
 .order-form__title {
+  position: relative;
+  display: block;
+
   @include indent;
-  padding-right: 27px;
-  margin-bottom: 12px;
-  @include font-caps(700, $font-size, 1.4);
+  margin-bottom: 23px;
+
+  @include font-caps(700, $font-size, 18px);
   color: $color-secondery;
 }
-// линия будет псевдоэлементом
 
-//нет еще отступов у order-form__inner
-
-.order-form label {
-  display: inline-block;
+// линия псевдоэлементом
+.order-form__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 76%;
+  height: 1px;
+  background-color: $color-secondery;
 }
 
-.order-form__label-radio {
-  @include font-set($font-size, 20px);
-  color: $black;
-  padding-left: 21px;
-  padding-top: 11px;
+.order-form__inner {
+  margin-bottom: 12px;
+}
+
+.order-form__wrap--color {
   padding-bottom: 11px;
 }
 
+.order-form__wrap--color .order-form__inner {
+  margin-bottom: 22px;
+}
+
+.order-form__input-radio,
+.order-form__input-check {
+  display: none;
+}
+
+.order-form__label-radio,
 .order-form__label-check {
-  @include font-set($font-size, 20px);
+  position: relative;
+  display: block;
+  padding-left: 60px;
+  padding-top: 12px;
+
+  @include font-set($font-size, 18px);
   color: $black;
-  padding-left: 23px;
-  padding-top: 10px;
+}
+
+.order-form__label-radio {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    background-color: $color-form;
+    border-radius: 50%;
+    display: none;
+  }
+}
+
+.order-form__input-radio:checked + .order-form__label-radio::after {
+  display: block;
+}
+
+.order-form__label-check {
+  padding-bottom: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border: 2px solid $color-primary;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 22px;
+    height: 10px;
+    border-left: 2px solid $black;
+    border-bottom: 2px solid $black;
+    transform: rotate(-45deg);
+    background-color: transparent;
+    display: none;
+  }
+}
+
+.order-form__input-check:checked + .order-form__label-check::after {
+  display: block;
+}
+
+.order-form__input-radio:hover + .order-form__label-radio::before,
+.order-form__input-radio:focus + .order-form__label-radio::before,
+.order-form__input-check:hover + .order-form__label-check::before,
+.order-form__input-check:focus + .order-form__label-check::before {
+  border-color: $color-form;
+}
+
+.order-form__input-radio:active + .order-form__label-radio::before,
+.order-form__input-check:active + .order-form__label-check::before {
+  border-color: $color-primary;
+  opacity: 0.3;
+}
+
+.order-form__wrap--name {
   padding-bottom: 10px;
 }
 
+.order-form__wrap--name .order-form__inner {
+  margin-bottom: 23px;
+}
+
+.order-form__wrap--contact .order-form__inner {
+  position: relative;
+}
+
+.order-form__wrap--contact .order-form__inner:last-child {
+  padding-top: 21px;
+  margin-bottom: 0;
+}
+
 .order-form__label {
-  @include font-set($font-size, 20px);
+  @include font-set($font-size, 18px);
   color: $black;
 }
 
 .order-form__input {
-  @include font($font-size, 20px);
-  width: 258px;
+  width: 99%;
   padding: 15px 1px;
+
+  @include font($font-size, 18px);
+  color: $color-primary;
   border: none;
-  border-bottom: 2px solid $black;
+  box-shadow: inset 0 -2px 0 $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: inset 0 -2px 0 $color-form;
+  }
+
+  &::-webkit-input-placeholder {
+    opacity: 0.3;
+  }
+
+  &::-moz-placeholder {
+    opacity: 0.3;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 0.3;
+  }
+
+  &:-moz-placeholder {
+    opacity: 0.3;
+  }
+}
+
+.order-form__wrap--contact .order-form__input {
+  width: 85%;
+  padding-right: 36px;
+}
+
+.order-form__wrap--messege {
+  padding-bottom: 0;
 }
 
 .order-form__message {
-  width: 256px;
-  height: 138px;
+  width: 85%;
+  height: 104px;
+  padding: 17px;
+
+  @include font($font-size, 18px);
+  color: $color-primary;
   border: 2px solid $color-primary;
+  border-bottom-color: $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-form;
+    border-bottom-color: $black;
+  }
+
+  &::-webkit-input-placeholder {
+    opacity: 0.3;
+  }
+
+  &::-moz-placeholder {
+    opacity: 0.3;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 0.3;
+  }
+
+  &:-moz-placeholder {
+    opacity: 0.3;
+  }
 }
 
 .order-form__footer {
@@ -75,33 +243,37 @@
 }
 
 .order-form__btn {
-  width: 256px;
+  width: 260px;
   margin-top: 30px;
 }
 
 ////
 
 @media (min-width: $mq-medium) {
-  .order-form__group {
-    @include indent(0, 50px);
-  }
-
   .order-form__group:nth-of-type(even) {
     background-color: $color-bg;
   }
 
   .order-form__wrap {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
     flex-wrap: wrap;
-    height: 128px;
+    align-items: flex-start;
+
+    @include indent(0, 50px);
+    padding-bottom: 28px;
   }
 
-  .order-form__wrap--color,
-  .order-form__wrap--name {
-    height: 204px;
+  .order-form__wrap-flex {
+    width: 77%;
+  }
+
+  .order-form__wrap--color .order-form__wrap-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .order-form__wrap--color .order-form__inner {
+    width: 50%;
   }
 
   .order-form__wrap--name .order-form__inner,
@@ -110,115 +282,142 @@
     align-items: baseline;
   }
 
-  .order-form__wrap--name .order-form__inner {
-    width: 500px;
+  .order-form__wrap--contact .order-form__inner {
+    width: 100%;
+  }
+
+  .order-form__wrap--contact .order-form__inner:last-child {
+    padding-top: 12px;
+    margin-bottom: 12px;
   }
 
   .order-form__title {
-    width: 138px;
-    margin-bottom: 100px;
+    width: 23%;
   }
 
-  .order-form__wrap--color .order-form__title,
-  .order-form__wrap--name .order-form__title {
-    margin-bottom: 180px;
-  }
-
-  .order-form__wrap--contact .order-form__title {
-    margin-bottom: 0;
+  .order-form__title::after {
+    display: none;
   }
 
   .order-form__label-radio {
-    padding-left: 27px;
+    padding-left: 80px;
     padding-top: 17px;
     padding-bottom: 17px;
+
     @include font-set(19px, 21px);
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 15px;
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .order-form__label-check {
-    padding-left: 27px;
+    padding-left: 80px;
     padding-top: 16px;
     padding-bottom: 15px;
+
     @include font-set(19px, 21px);
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 13px;
+      width: 28px;
+      height: 14px;
+    }
   }
 
   .order-form__label {
     padding-right: 26px;
+
     @include font-set(19px, 21px);
   }
 
-  .order-form__wrap--contact .order-form__label {
-    width: 165px;
-  }
-
   .order-form__input {
-    width: 100%;
+    padding: 15px 17px;
+
     @include font(19px, 20px);
   }
 
   .order-form__wrap--contact .order-form__input {
-    width: 500px;
+    width: 71%;
+    padding-right: 55px;
+    background-color: $color-bg;
   }
 
   .order-form__message {
-    width: 496px;
+    width: 71%;
   }
 
   .order-form__footer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+
     @include indent(50px, 0);
+    margin-top: 25px;
   }
 
   .order-form__caption {
     order: 1;
+
     @include font($font-size, 30px);
   }
 
   .order-form__btn {
-    width: 226px;
-    margin-top: 0px;
+    width: 230px;
+    margin-top: 0;
   }
 }
 
 ////
 
 @media (min-width: $mq-large) {
-  .order-form__group {
-    @include indent(0, 50px 110px);
-  }
-
-  .order-form__wrap--color {
-    height: 128px;
-  }
-
-    .order-form__wrap--name .order-form__inner {
-    width: 700px;
+  .order-form__wrap {
+    max-width: 938px;
+    padding-left: 62px;
+    margin: 0 auto;
   }
 
   .order-form__title {
-    width: 86px;
+    width: 103px;
   }
 
-  .order-form__wrap--color .order-form__title {
-    margin-bottom: 100px;
+  .order-form__wrap-flex {
+    width: 83%;
   }
 
-  .order-form__wrap--name {
-    margin-right: 115px;
+  .order-form__wrap--color .order-form__inner {
+    width: 33%;
+  }
+
+  .order-form__wrap--name .order-form__wrap-flex {
+    width: 75%;
+  }
+
+  .order-form__wrap--contact .order-form__inner {
+    width: 86%;
   }
 
   .order-form__wrap--contact .order-form__input {
-    width: 700px;
-  }
-
-  .order-form__message {
-    width: 696px;
+    width: 79%;
   }
 
   .order-form__footer {
-    @include indent(50px 225px, 0);
+    max-width: 700px;
+
+    @include indent(22px auto 50px, 0 175px);
   }
 }
