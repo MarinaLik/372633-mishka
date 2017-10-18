@@ -1,4 +1,4 @@
-.logo--header {
+.logo--header img {
   width: 86px;
   height: 35px;
 }
@@ -10,24 +10,27 @@
 ////
 
 @media (min-width: $mq-medium) {
-  .logo--header {
+  .logo--header img {
     width: 113px;
     height: 46px;
-    background-color: #ececec;//временно
   }
 
   .logo--footer {
     display: block;
     width: 33%;
     font-size: 0;
-    background-color: $white;//временно
+  }
+
+  .logo--footer img {
+    width: 102px;
+    height: 34px;
   }
 }
 
 ////
 
 @media (min-width: $mq-large) {
-  .logo--header {
+  .logo--header img {
     width: 150px;
     height: 72px;
   }

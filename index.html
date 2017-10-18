@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
   </head>
   <body>
     <header class="page-header">
@@ -15,7 +18,11 @@
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="logo logo--header">
-              <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+              </picture>
             </a>
           </li>
           <li class="main-nav__item main-nav__item--catalog">
@@ -80,7 +87,11 @@
             </table>
           </div>
           <div class="product-week__image">
-            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            </picture>
           </div>
           <footer class="product-week__footer">
             <b class="product-week__price">Цена: 990 руб.</b>
@@ -106,7 +117,7 @@
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__slider slider">
             <blockquote class="reviews__item slider__item" id="slider1">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
               <cite class="reviews__author">
                 <b class="reviews__author-name">Анастасия Красильникова</b>
                 <span class="reviews__hashtag">@misssssiskras</span>
@@ -149,8 +160,11 @@
           </div>
         </div>
         <div class="contacts__map">
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1998.6013717087894!2d30.32378603715311!3d59.93875656138258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1506254255754" width="800" height="457" style="border:0" allowfullscreen></iframe> -->
-          <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+          </picture>
           <img class="contacts__map-point" src="img/icon-map-pin.svg" width="67" height="100" alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101">
         </div>
         <a class="contacts__btn btn" href="#">Напишите нам</a>
@@ -159,7 +173,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrap">
         <a class="logo logo--footer">
-          <img src="img/logo-mobile.svg" width="102" height="34" alt="Мишка"></a>
+          <img src="img/logo-footer.svg" width="102" height="34" alt="Мишка"></a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">

@@ -52,15 +52,8 @@ body {
 
 // Блоки без элементов по БЭМ
 .page-main {
-  @include indent;
+  // @include indent;
   width: 100%;
-}
-
-.catalog {
-  width: 100%;
-
-  @include indent;
-  padding-top: 30px;
 }
 
 .promo-text {
@@ -84,10 +77,6 @@ body {
 ////
 
 @media (min-width: $mq-medium) {
-  .catalog {
-    padding-top: 78px;
-  }
-
   .promo-text {
     @include indent(80px 50px 10px, 0);
     @include font($font-size, 30px);
@@ -105,16 +94,6 @@ body {
 ////
 
 @media (min-width: $mq-large) {
-  .catalog {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 1050px;
-
-    @include indent(0 auto, 128px 50px 0);
-  }
-
   .promo-text {
     max-width: 675px;
     margin: 122px auto 10px;

@@ -1,16 +1,19 @@
 .production {
-  margin: 0 30px 58px;
-  padding: 0;
-  border: $border-line;
+  margin-bottom: 58px;
+  padding: 0 30px;
   outline: none;
 }
 
-.production:hover,
-.production:focus {
+.production__wrap {
+  border: $border-line;
+}
+
+.production__wrap:hover,
+.production__wrap:focus {
   box-shadow: 0 6px 10px rgba($black, 0.1);
 }
 
-.production:active {
+.production__wrap:active {
   box-shadow: 0 3px 5px rgba($black, 0.1);
 }
 
@@ -32,8 +35,14 @@
 
 .production__player {
   position: relative;
+  min-height: 150px;
+}
+
+.production__player img {
+  display: block;
+  max-width: 100%;
   width: 100%;
-  height: 150px;
+  height: auto;
 }
 
 .production__player-btn {
@@ -53,17 +62,17 @@
 
   &:hover,
   &:focus {
-    transform: scale(1.2) translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.2);
   }
 
   &:active {
-    transform: scale(0.8) translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 0.3;
   }
 }
 
 .production__descr {
-  margin: 33px 34px;
+  padding: 33px 34px;
 }
 
 .production__text {
@@ -77,22 +86,22 @@
 
 @media (min-width: $mq-medium) {
   .production {
+    padding: 0 50px;
+    margin-bottom: 63px;
+  }
+
+  .production__wrap {
     display: flex;
     flex-direction: column;
-    max-width: 666px;
-    margin: 0 auto 63px;
-    padding: 0;
   }
 
   .production__player {
     order: -1;
-    width: 666px;
-    height: 453px;
+    min-height: 453px;
     background-color: #ececec;
   }
 
   .production__top {
-    width: 100%;
     padding: 40px;
   }
 
@@ -105,7 +114,7 @@
   }
 
   .production__descr {
-    margin: 0 40px 45px;
+    padding: 33px 40px 45px;
   }
 
   .production__text {
@@ -117,12 +126,15 @@
 
 @media (min-width: $mq-large) {
   .production {
-    position: relative;
-    flex-wrap: wrap;
-    align-items: flex-end;
     max-width: 1050px;
     margin: 0 auto;
     margin-bottom: 105px;
+  }
+
+  .production__wrap {
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-end;
   }
 
   .production__player {
@@ -130,7 +142,7 @@
     top: 0;
     left: 0;
     width: 680px;
-    height: 453px;
+    height: 455px;
     background-color: #ececec;
   }
 
@@ -153,8 +165,8 @@
 
   .production__descr {
     width: 33%;
-    margin: 0;
     margin-bottom: 60px;
+    padding: 0;
   }
 
   .production__text {
