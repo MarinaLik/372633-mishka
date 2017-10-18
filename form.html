@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
     <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
   </head>
   <body>
     <header class="page-header">
@@ -15,7 +18,11 @@
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="logo logo--header" href="index.html">
-              <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+              </picture>
             </a>
           </li>
           <li class="main-nav__item main-nav__item--catalog">
@@ -140,7 +147,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrap">
         <a class="logo logo--footer">
-          <img src="img/logo-mobile.svg" width="102" height="34" alt="Мишка"></a>
+          <img src="img/logo-footer.svg" width="102" height="34" alt="Мишка"></a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
