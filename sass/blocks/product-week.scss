@@ -1,5 +1,5 @@
 .product-week {
-  @include indent;
+  // @include indent;
 }
 
 .product-week__wrap {
@@ -45,6 +45,18 @@
 
 .product-week__row {
   border-bottom: $border-line;
+}
+
+.product-week__image {
+  // width: 333px;
+  min-height: 315px;
+}
+
+.product-week__image img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .product-week__footer {
@@ -116,7 +128,6 @@
     right: 50px;
     width: 333px;
     height: 404px;
-    background-color: $color-bg;
   }
 
   .product-week__footer {
@@ -145,6 +156,7 @@
   .product-week__header {
     justify-content: flex-start;
     z-index: 5;
+    width: 75%;
   }
 
   .product-week__title {

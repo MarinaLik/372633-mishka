@@ -1,8 +1,6 @@
 .main-nav {
   position: relative;
   min-height: 79px;
-
-  @include indent;
 }
 
 .main-nav__toggle {
@@ -69,7 +67,9 @@
   @include font-set($font-size, 1.4);
   color: $black;
   text-decoration: none;
+}
 
+.main-nav__item a[href] {
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -89,10 +89,10 @@
   @include indent(0 auto, 22px 0);
 }
 
-.main-nav__item--logo img {
-  width: 86px;
-  height: 35px;
-}
+// .main-nav__item--logo img {
+//   width: 86px;
+//   height: 35px;
+// }
 
 .main-nav__item--search img,
 .main-nav__item--cart img {

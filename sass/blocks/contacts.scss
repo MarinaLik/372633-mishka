@@ -1,5 +1,5 @@
 .contacts {
-  @include indent;
+  // @include indent;
 }
 
 .contacts__wrap {
@@ -54,9 +54,15 @@
 
 .contacts__map {
   position: relative;
-  width: 100%;
-  height: 457px;
+  min-height: 457px;
   background-color: $color-bg;
+}
+
+.contacts__map-img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .contacts__map-point {

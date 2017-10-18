@@ -1,5 +1,5 @@
 .order-form {
-  @include indent;
+  // @include indent;
 }
 
 .order-form__group {
@@ -404,15 +404,17 @@
   }
 
   .order-form__wrap--name .order-form__wrap-flex {
-    width: 75%;
+    // width: 75%;
+    width: 700px;
   }
 
   .order-form__wrap--contact .order-form__inner {
-    width: 86%;
+    // width: 86%;
+    width: 803px;
   }
 
   .order-form__wrap--contact .order-form__input {
-    width: 79%;
+    width: 78%;
   }
 
   .order-form__footer {

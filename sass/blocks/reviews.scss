@@ -1,5 +1,5 @@
 .reviews {
-  @include indent;
+  // @include indent;
 }
 
 .reviews__wrap {
@@ -48,7 +48,13 @@
     flex-wrap: wrap;
     margin: 30px 0 0;
     padding: 78px 50px 115px;
-    background: url("../img/review@1x.jpg") no-repeat;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .reviews__title {
