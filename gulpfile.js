@@ -15,7 +15,7 @@ var webp = require("gulp-webp");
 var del = require("del");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
-var uglify = require("uglify-js");
+var uglify = require("gulp-uglify");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -82,7 +82,8 @@ gulp.task("clean", function () {
 });
 
 gulp.task("js", function() {
-  gulp.src("js/script.js")
+  return gulp.src("js/script.js")
+    .pipe(plumber())
     .pipe(uglify())
     .pipe(gulp.dest("build/js"))
     .pipe(rename({suffix: '.min'}))
