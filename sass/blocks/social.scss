@@ -5,16 +5,15 @@
 .social__list {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @include indent;
   list-style: none;
 }
 
-// временные стили для иконок
 .social__item {
   @include indent(24px 0, 0);
-  margin-right: 20px;
-  background-color: $white;
+  margin-right: 40px;
 }
 
 .social__item:last-child {
@@ -22,10 +21,20 @@
 }
 
 .social__link {
-  display: block;
-  width: 30px;
-  height: 30px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
   font-size: 0;
+}
+
+.social__link:hover svg,
+.social__link:focus svg {
+  fill: $color-footer;
+}
+
+.social__link:active svg {
+  fill: $color-footer;
+  opacity: 0.3;
 }
 
 ////

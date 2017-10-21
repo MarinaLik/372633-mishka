@@ -15,10 +15,17 @@
 .copyright__link {
   display: inline-block;
   vertical-align: middle;
-  width: 27px;
-  height: 34px;
   font-size: 0;
-  background-color: $white;
+}
+
+.copyright__link:hover .icon--htmlacademy,
+.copyright__link:focus .icon--htmlacademy {
+  fill: $color-footer;
+}
+
+.copyright__link:active .icon--htmlacademy {
+  fill: $color-footer;
+  opacity: 0.3;
 }
 
 ////
@@ -26,5 +33,13 @@
 @media (min-width: $mq-medium) {
   .copyright {
     text-align: right;
+  }
+
+  .copyright__text {
+    margin-right: 24px;
+  }
+
+  .copyright__link {
+    padding-top: 5px;
   }
 }

@@ -11,30 +11,30 @@
   @include indent;
 }
 
-.categories__item a {
+.categories__link {
   display: flex;
   justify-content: space-between;
-  padding: 28px 30px;
+  padding: 23px 30px 18px;
   text-decoration: none;
   background-color: $color-secondery;
+
+  &:hover,
+  &:focus,
+  &:active {
+    padding-bottom: 33px;
+    margin-top: -5px;
+    background-color: #59d5bc;
+  }
 }
 
-.categories__item--toys a {
+.categories__link--toys {
   background-color: #56c3b2;
-}
 
-.categories__item a:hover,
-.categories__item a:focus,
-.categories__item a:active {
-  padding-bottom: 33px;
-  margin-top: -5px;
-  background-color: #59d5bc;
-}
-
-.categories__item--toys a:hover,
-.categories__item--toys a:focus,
-.categories__item--toys a:active {
-  background-color: #46c1ae;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #46c1ae;
+  }
 }
 
 .categories__name {
@@ -46,7 +46,19 @@
   background-color: transparent;
 }
 
-.categories__item a:active .categories__name {
+.categories__link:active .categories__name {
+  opacity: 0.3;
+}
+
+.categories__link:hover .icon--interior,
+.categories__link:hover .icon--toy,
+.categories__link:focus .icon--interior,
+.categories__link:focus .icon--toy {
+  opacity: 0.7;
+}
+
+.categories__link:active .icon--interior,
+.categories__link:active .icon--toy {
   opacity: 0.3;
 }
 
@@ -54,7 +66,9 @@
 
 @media (min-width: $mq-medium) {
   .categories {
-    margin-top: -119px;
+    position: relative;
+    z-index: 2;
+    margin-top: -118px;
   }
 
   .categories__list {
@@ -64,6 +78,10 @@
 
   .categories__item {
     width: 50%;
+  }
+
+  .categories__link {
+    padding: 28px 35px;
   }
 
   .categories__name {

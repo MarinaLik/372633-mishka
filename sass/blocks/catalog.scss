@@ -11,6 +11,7 @@
 .catalog-item__image {
   display: block;
   min-height: 195px;
+
   @include indent;
 }
 
@@ -22,7 +23,6 @@
 }
 
 .catalog-item__descr {
-  // width: 202px;
   padding: 28px;
   border: $border-line;
 }
@@ -65,7 +65,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 44px;
+  padding-top: 20px;
   border-top: $border-line;
 }
 
@@ -74,33 +74,38 @@
   color: $black;
 }
 
-//временный фон
 .catalog-item__btn {
   display: block;
-  width: 24px;
-  height: 24px;
-  background-color: #ececec;
+  width: 20px;
+  height: 22px;
   font-size: 0;
   cursor: pointer;
+}
+
+.catalog-item__btn:hover .icon--catalog-cart,
+.catalog-item__btn:focus .icon--catalog-cart {
+  fill: $color-secondery;
+  opacity: 1;
+}
+
+.catalog-item__btn:active .icon--catalog-cart {
+  fill: $color-secondery;
+  opacity: 0.3;
 }
 
 ////
 
 @media (min-width: $mq-medium) {
   .catalog {
-    // margin: 0 auto;
-    // padding-top: 78px;
     padding: 78px 50px 0;
   }
 
   .catalog-item {
     display: flex;
     justify-content: center;
-    margin-bottom: 52px;
-    // @include indent(0 auto 52px, 0 50px);
+    margin-bottom: 54px;
   }
 
-  //фон временно для видимой границы
   .catalog-item__image {
     width: 50%;
     min-height: 334px;
@@ -111,8 +116,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // width: 276px;
     width: 50%;
+    padding: 26px 28px;
     box-sizing: border-box;
   }
 
@@ -121,13 +126,22 @@
   }
 
   .catalog-item__text {
-    padding-bottom: 5px;
+    padding: 5px 0 13px;
 
     @include font(15px, 2);
   }
 
+  .catalog-item__order {
+    padding-top: 22px;
+  }
+
   .catalog-item__price {
     @include font-set($font-size, 1.4);
+  }
+
+  .catalog-item__btn {
+    width: 25px;
+    height: 24px;
   }
 }
 
@@ -141,20 +155,17 @@
     align-items: stretch;
     max-width: 1050px;
     padding-top: 128px;
-    // padding: 128px 50px 0;
   }
 
   .catalog-item {
     flex-direction: column;
 
     @include indent;
-    margin-bottom: 55px;
+    margin-bottom: 58px;
   }
 
   .catalog-item__image {
-    // max-width: 100%;
     width: 100%;
-    // width: 316px;
     min-height: 462px;
     background-color: #ececec;
   }

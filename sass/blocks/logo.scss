@@ -18,12 +18,18 @@
   .logo--footer {
     display: block;
     width: 33%;
+    margin-top: -5px;
     font-size: 0;
   }
 
-  .logo--footer img {
-    width: 102px;
-    height: 34px;
+  .logo--footer:hover .icon--logo-footer,
+  .logo--footer:focus .icon--logo-footer {
+    fill: $color-footer;
+  }
+
+  .logo--footer:active .icon--logo-footer {
+    fill: $color-footer;
+    opacity: 0.3;
   }
 }
 

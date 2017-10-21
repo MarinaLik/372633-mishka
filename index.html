@@ -11,6 +11,9 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" title="Меню">
@@ -32,10 +35,12 @@
             <a href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item main-nav__item--search">
-            <a href="#"><img src="#" width="21" height="18">Поиск по сайту</a>
+            <a href="#">
+              <svg class="icon icon--search" width="19" height="18"><use xlink:href="img/sprite.svg#icon-search"></use></svg>Поиск по сайту</a>
           </li>
           <li class="main-nav__item main-nav__item--cart">
-            <a href="#"><img src="#" width="21" height="18">Корзина: пока пуста</a>
+            <a href="#">
+              <svg class="icon icon--cart" width="20" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>Корзина: пока пуста</a>
           </li>
           <li class="main-nav__item main-nav__item--add">
             <a href="#">Новые поступления</a>
@@ -53,13 +58,13 @@
     <main class="page-main">
       <div class="categories">
         <ul class="categories__list">
-          <li class="categories__item categories__item--interior">
-            <a href="#"><span class="categories__name">Предметы интерьера</span>
-              <img src="#" width="41" height="62"></a>
+          <li class="categories__item">
+            <a class="categories__link categories__link--interior" href="#"><span class="categories__name">Предметы интерьера</span>
+              <svg class="icon icon--interior" width="41" height="62"><use xlink:href="img/sprite.svg#icon-interior"></use></svg></a>
           </li>
-          <li class="categories__item categories__item--toys">
-            <a href="#"><span class="categories__name">Детские игрушки</span>
-            <img src="#" width="61" height="61"></a>
+          <li class="categories__item">
+            <a class="categories__link categories__link--toys" href="#"><span class="categories__name">Детские игрушки</span>
+            <svg class="icon icon--toy" width="60" height="60"><use xlink:href="img/sprite.svg#icon-toy"></use></svg></a>
           </li>
         </ul>
       </div>
@@ -88,6 +93,9 @@
           </div>
           <div class="product-week__image">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/triple-set-desktop@1x.webp 1x, img/webp/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/triple-set-tablet@1x.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/triple-set-mobile@1x.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
@@ -103,12 +111,18 @@
         <div class="features__wrap">
           <h2 class="features__title">Коротко о нас:</h2>
           <ul class="features__list">
-            <li class="features__item features__item--flower"><img src="#" width="55" height="38">Экологически чистые&nbsp;материалы</li>
-            <li class="features__item features__item--design"><img src="#" width="55" height="38">Скандинавский стиль по&nbsp;российской цене</li>
-            <li class="features__item features__item--heart"><img src="#" width="55" height="38">Увеличивает лайки на&nbsp;фотографиях</li>
-            <li class="features__item features__item--clew"><img src="#" width="55" height="38">Связано вручную с любовью&nbsp;и&nbsp;умилением</li>
-            <li class="features__item features__item--rocket"><img src="#" width="55" height="38">Поддержка отечественного производителя</li>
-            <li class="features__item features__item--gift"><img src="#" width="55" height="38">Поставляется в подарочной&nbsp;упаковке</li>
+            <li class="features__item features__item--flower">
+                <svg class="icon icon--feature-flower" width="33" height="38"><use xlink:href="img/sprite.svg#icon-feature-flower"></use></svg>Экологически чистые&nbsp;материалы</li>
+            <li class="features__item features__item--design">
+              <svg class="icon icon--feature-money" width="47" height="27"><use xlink:href="img/sprite.svg#icon-feature-money"></use></svg>Скандинавский стиль по&nbsp;российской цене</li>
+            <li class="features__item features__item--heart">
+              <svg class="icon icon--feature-heart" width="34" height="27"><use xlink:href="img/sprite.svg#icon-feature-heart"></use></svg>Увеличивает лайки на&nbsp;фотографиях</li>
+            <li class="features__item features__item--clew">
+              <svg class="icon icon--feature-ball" width="35" height="34"><use xlink:href="img/sprite.svg#icon-feature-ball"></use></svg>Связано вручную с любовью&nbsp;и&nbsp;умилением</li>
+            <li class="features__item features__item--rocket">
+              <svg class="icon icon--feature-rocket" width="55" height="23"><use xlink:href="img/sprite.svg#icon-feature-rocket"></use></svg>Поддержка отечественного производителя</li>
+            <li class="features__item features__item--gift">
+              <svg class="icon icon--feature-gift" width="33" height="32"><use xlink:href="img/sprite.svg#icon-feature-gift"></use></svg>Поставляется в подарочной&nbsp;упаковке</li>
           </ul>
         </div>
       </section>
@@ -149,7 +163,7 @@
         <div class="contacts__wrap">
           <div class="contacts__top">
             <h2 class="contacts__title">Контакты</h2>
-            <img src="img/icon-flag.svg" width="47" height="81">
+            <svg class="icon icon--flag" width="47" height="81"><use xlink:href="img/sprite.svg#icon-flag"></use></svg>
           </div>
           <div class="contacts__inner">
             <span class="contacts__label">e-mail:</span>
@@ -161,11 +175,14 @@
         </div>
         <div class="contacts__map">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
           </picture>
-          <img class="contacts__map-point" src="img/icon-map-pin.svg" width="67" height="100" alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101">
+          <svg class="contacts__map-point" width="67" height="100"><use xlink:href="img/sprite.svg#icon-map-pin"></use></svg>
         </div>
         <a class="contacts__btn btn" href="#">Напишите нам</a>
       </section>
@@ -173,27 +190,27 @@
     <footer class="page-footer">
       <div class="page-footer__wrap">
         <a class="logo logo--footer">
-          <img src="img/logo-footer.svg" width="102" height="34" alt="Мишка"></a>
+          <svg class="icon icon--logo-footer" width="102" height="34"><use xlink:href="img/sprite.svg#icon-logo-footer"></use></svg></a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#" target="_blank" title="Инстаграм">
-                <img src="#" width="22" height="21">Мы в Инстаграме</a>
+                <svg class="icon icon--insta" width="22" height="21"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>Мы в Инстаграме</a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#" target="_blank" title="Фейсбук">
-                <img src="#" width="15" height="29">Мы в Фейсбуке</a>
+                <svg class="icon icon--fb" width="15" height="29"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>Мы в Фейсбуке</a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#" target="_blank" title="Твиттер">
-                <img src="#" width="24" height="20">Мы в Твиттере</a>
+                <svg class="icon icon--twitter" width="24" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>Мы в Твиттере</a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <img src="#" width="27" height="34">HTML Academy</a>
+            <svg class="icon icon--htmlacademy" width="27" height="34"><use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use></svg>HTML Academy</a>
         </div>
       </div>
     </footer>
