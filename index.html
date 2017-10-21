@@ -8,12 +8,9 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.min.js"></script>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <div style="display: none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" title="Меню">
@@ -174,13 +171,14 @@
           </div>
         </div>
         <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1998.599104370521!2d30.32088925141702!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1508593919269" allowfullscreen></iframe>
           <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+            <img class="contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101">
           </picture>
           <svg class="contacts__map-point" width="67" height="100"><use xlink:href="img/sprite.svg#icon-map-pin"></use></svg>
         </div>
@@ -229,6 +227,8 @@
         <button class="modal__btn btn" type="submit">Добавить</button>
       </form>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
