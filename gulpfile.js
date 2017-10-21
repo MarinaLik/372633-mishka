@@ -82,7 +82,7 @@ gulp.task("clean", function () {
 });
 
 gulp.task("js", function() {
-  gulp.src(["js/script.js", "js/svg4everybody.js"])
+  gulp.src("js/script.js")
     .pipe(uglify())
     .pipe(gulp.dest("build/js"))
     .pipe(rename({suffix: '.min'}))
