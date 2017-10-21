@@ -47,6 +47,10 @@
   display: none;
 }
 
+.order-form label {
+  cursor: pointer;
+}
+
 .order-form__label-radio,
 .order-form__label-check {
   position: relative;
@@ -182,7 +186,7 @@
   }
 
   &:-ms-input-placeholder {
-    opacity: 0.3;
+    color: rgba($color-primary, 0.3);
   }
 
   &:-moz-placeholder {
@@ -221,13 +225,11 @@
   @include font($font-size, 18px);
   color: $color-primary;
   border: 2px solid $color-primary;
-  border-bottom-color: $black;
 
   &:hover,
   &:focus,
   &:active {
     border-color: $color-form;
-    border-bottom-color: $black;
   }
 
   &::-webkit-input-placeholder {
@@ -239,7 +241,7 @@
   }
 
   &:-ms-input-placeholder {
-    opacity: 0.3;
+    color: rgba($color-primary, 0.3);
   }
 
   &:-moz-placeholder {

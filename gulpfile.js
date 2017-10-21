@@ -15,6 +15,7 @@ var webp = require("gulp-webp");
 var del = require("del");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
+var uglify = require("uglify-js");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -80,6 +81,14 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task("js", function() {
+  gulp.src(["js/script.js", "js/svg4everybody.js"])
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -91,8 +100,9 @@ gulp.task("serve", function() {
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html", ["html"]);
+  gulp.watch("js/**/*.js", ["js"]);
 });
 
 gulp.task("build", function (done) {
-  run("clean", "copy", "html", "style", "sprite", "images", "webp", done);
+  run("clean", "copy", "html", "style", "js", "sprite", "images", "webp", done);
 });

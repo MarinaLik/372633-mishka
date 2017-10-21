@@ -8,12 +8,9 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.min.js" async></script>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <div style="display: none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" title="Меню">
@@ -198,6 +195,8 @@
         <button class="modal__btn btn" type="submit">Добавить</button>
       </form>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

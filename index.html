@@ -8,12 +8,9 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.min.js"></script>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <div style="display: none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" title="Меню">
@@ -174,6 +171,7 @@
           </div>
         </div>
         <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1998.6013717087894!2d30.32378603715311!3d59.93875656138258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1506254255754" allowfullscreen></iframe>
           <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x">
@@ -229,6 +227,8 @@
         <button class="modal__btn btn" type="submit">Добавить</button>
       </form>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

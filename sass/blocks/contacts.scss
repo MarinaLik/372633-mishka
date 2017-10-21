@@ -50,6 +50,12 @@
   background-color: $color-bg;
 }
 
+.contacts__map iframe {
+  width: 100%;
+  height: 457px;
+  border: none;
+}
+
 .contacts__map-img {
   display: block;
   max-width: 100%;

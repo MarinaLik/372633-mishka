@@ -53,6 +53,7 @@
   text-align: center;
   background-color: $white;
   border: 2px solid rgba($color-primary, 0.1);
+  cursor: pointer;
 }
 
 .modal__input:hover + .modal__label,
