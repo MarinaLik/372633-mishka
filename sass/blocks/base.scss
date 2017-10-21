@@ -52,42 +52,21 @@ body {
 
 // Блоки без элементов по БЭМ
 .page-main {
-  // @include indent;
   width: 100%;
 }
 
 .promo-text {
   @include font(13px, 24px);
-  @include indent(24px 30px, 0);
+  @include indent(23px 30px, 0);
   color: $color-primary;
-}
-
-.icon-phone {
-  position: absolute;
-  right: 8px;
-  bottom: 15px;
-}
-
-.icon-mail {
-  position: absolute;
-  right: 4px;
-  bottom: 10px;
 }
 
 ////
 
 @media (min-width: $mq-medium) {
   .promo-text {
-    @include indent(80px 50px 10px, 0);
+    @include indent(72px 50px 10px, 0);
     @include font($font-size, 30px);
-  }
-
-  .icon-phone {
-    right: 26px;
-  }
-
-  .icon-mail {
-    right: 22px;
   }
 }
 
@@ -99,13 +78,5 @@ body {
     margin: 122px auto 10px;
     padding-left: 175px;
     padding-right: 200px;
-  }
-
-  .icon-phone {
-    right: 8px;
-  }
-
-  .icon-mail {
-    right: 4px;
   }
 }

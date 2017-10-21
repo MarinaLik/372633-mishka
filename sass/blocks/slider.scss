@@ -1,12 +1,12 @@
 .slider__pagination {
   display: flex;
-  margin: 35px 0;
+  margin: 31px 0 38px;
 }
 
 .slider__btn {
   position: relative;
-  width: 128px;
-  height: 50px;
+  width: 130px;
+  height: 51px;
 
   @include indent;
   border: $border-line;
@@ -18,9 +18,9 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 49%;
     right: 40px;
-    width: 45px;
+    width: 48px;
     height: 4px;
     background-color: $black;
   }
@@ -38,13 +38,13 @@
 }
 
 .slider__btn--prev::after {
-  left: 38px;
+  left: 40px;
   border-top-color: transparent;
   border-right-color: transparent;
 }
 
 .slider__btn--next::after {
-  right: 41px;
+  right: 43px;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
@@ -119,6 +119,6 @@
   }
 
   .slider__btn--next::after {
-    right: 20px;
+    right: 22px;
   }
 }

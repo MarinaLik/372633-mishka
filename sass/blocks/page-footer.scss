@@ -1,5 +1,4 @@
 .page-footer {
-  // @include indent;
   width: 100%;
   background-color: $color-bg;
 }
@@ -23,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 31px 50px;
+    padding: 30px 50px;
   }
 
   .page-footer__social {
@@ -41,5 +40,6 @@
   .page-footer__wrap {
     max-width: 1050px;
     margin: 0 auto;
+    padding: 28px 50px;
   }
 }

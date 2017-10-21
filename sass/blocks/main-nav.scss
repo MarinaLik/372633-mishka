@@ -86,7 +86,8 @@
 }
 
 .main-nav__item--logo a {
-  @include indent(0 auto, 22px 0);
+  @include indent(0 auto, 22px 0 15px);
+  text-align: center;
 }
 
 // .main-nav__item--logo img {
@@ -94,9 +95,18 @@
 //   height: 35px;
 // }
 
-.main-nav__item--search img,
-.main-nav__item--cart img {
-  padding-right: 24px;
+.main-nav__item a:hover .icon--search,
+.main-nav__item a:focus .icon--search,
+.main-nav__item a:hover .icon--cart,
+.main-nav__item a:focus .icon--cart {
+  fill: $color-secondery;
+  opacity: 1;
+}
+
+.main-nav__item a:active .icon--search,
+.main-nav__item a:active .icon--cart {
+  fill: $color-secondery;
+  opacity: 0.3;
 }
 
 ////
@@ -152,6 +162,8 @@
   }
 
   .main-nav__list {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     padding: 0 50px;
@@ -167,12 +179,12 @@
   .main-nav__item--logo {
     flex-grow: 1;
     width: 40%;
-    text-align: left;
     margin-right: auto;
   }
 
   .main-nav__item--logo a {
-    @include indent(0, 21px 0);
+    margin: 0;
+    text-align: left;
   }
 
   .main-nav__item--catalog,
@@ -190,8 +202,7 @@
   }
 
   .main-nav__item--catalog a,
-  .main-nav__item--form a,
-  .main-nav__item--add a {
+  .main-nav__item--form a {
     padding: 20px 0;
 
     @include font-set(15px, 24px);
@@ -205,12 +216,8 @@
   }
 
   .main-nav__item--search a {
-    padding: 32px 0;
+    padding: 35px 0;
     font-size: 0;
-  }
-
-  .main-nav__item--search img {
-    margin: 0 auto;
   }
 
   .main-nav__item--cart {
@@ -223,10 +230,6 @@
     padding: 32px 0;
   }
 
-  .main-nav__item--cart img {
-    padding-right: 30px;
-  }
-
   .main-nav__item--add {
     display: none;
   }
@@ -236,6 +239,8 @@
 
 @media (min-width: $mq-large) {
   .main-nav__list {
+    position: relative;
+    z-index: 1;
     max-width: 1050px;
     margin: 0 auto;
   }
@@ -243,24 +248,22 @@
   .main-nav__item--logo {
     flex-grow: 0;
     width: 150px;
-    margin: auto;
   }
 
   .main-nav__item--logo a {
-    padding: 8px 0;
-  }
-
-  .main-nav__item--catalog,
-  .main-nav__item--form {
-    width: 220px;
+    padding: 8px 0 0;
   }
 
   .main-nav__item--catalog {
     order: -2;
+    width: 185px;
+    border-right: $border-line;
   }
 
   .main-nav__item--form {
     order: -1;
+    width: 230px;
+    padding-left: 34px;
   }
 
   .main-nav__item--catalog a,
@@ -278,5 +281,11 @@
     display: block;
     width: 220px;
     text-align: left;
+  }
+
+  .main-nav__item--add a {
+    padding: 20px 0;
+
+    @include font-set(15px, 24px);
   }
 }

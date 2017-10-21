@@ -11,6 +11,9 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" title="Меню">
@@ -32,10 +35,11 @@
             <a>Вязание на заказ</a>
           </li>
           <li class="main-nav__item main-nav__item--search">
-            <a href="#"><img src="#" width="21" height="18">Поиск по сайту</a>
+            <a href="#">
+              <svg class="icon icon--search" width="19" height="18"><use xlink:href="img/sprite.svg#icon-search"></use></svg>Поиск по сайту</a>
           </li>
           <li class="main-nav__item main-nav__item--cart">
-            <a href="#"><img src="#" width="21" height="18">Корзина: пока пуста</a>
+            <a href="#"><svg class="icon icon--cart" width="20" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>Корзина: пока пуста</a>
           </li>
           <li class="main-nav__item main-nav__item--add">
             <a href="#">Новые поступления</a>
@@ -123,12 +127,12 @@
             <div class="order-form__inner">
               <label class="order-form__title" for="phone">Тел</label>
               <input class="order-form__input" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХ ХХ*" pattern="\+7\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
-              <img class="icon-phone" src="img/icon-phone.svg" width="25" height="24">
+              <svg class="icon icon--phone" width="25" height="24"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
             </div>
             <div class="order-form__inner">
               <label class="order-form__title" for="email">E-mail</label>
               <input class="order-form__input" type="email" id="email" name="email" placeholder="Ваш Email*" required>
-              <img class="icon-mail" src="img/icon-mail.svg" width="32" height="32">
+              <svg class="icon icon--mail" width="32" height="32"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
             </div>
           </div>
         </fieldset>
@@ -146,28 +150,28 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrap">
-        <a class="logo logo--footer">
-          <img src="img/logo-footer.svg" width="102" height="34" alt="Мишка"></a>
+        <a class="logo logo--footer" href="index.html">
+          <svg class="icon icon--logo-footer" width="102" height="34"><use xlink:href="img/sprite.svg#icon-logo-footer"></use></svg></a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#" target="_blank" title="Инстаграм">
-                <img src="#" width="22" height="21">Мы в Инстаграме</a>
+                <svg class="icon icon--insta" width="22" height="21"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>Мы в Инстаграме</a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#" target="_blank" title="Фейсбук">
-                <img src="#" width="15" height="29">Мы в Фейсбуке</a>
+                <svg class="icon icon--fb" width="15" height="29"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>Мы в Фейсбуке</a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#" target="_blank" title="Твиттер">
-                <img src="#" width="24" height="20">Мы в Твиттере</a>
+                <svg class="icon icon--twitter" width="24" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>Мы в Твиттере</a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <img src="#" width="27" height="34">HTML Academy</a>
+            <svg class="icon icon--htmlacademy" width="27" height="34"><use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use></svg>HTML Academy</a>
         </div>
       </div>
     </footer>
