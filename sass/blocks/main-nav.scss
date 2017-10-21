@@ -56,6 +56,8 @@
 
 .main-nav__item {
   @include indent(0, 0 30px);
+  border-bottom: $border-line;
+  background-color: $white;
 }
 
 .main-nav__item a {
@@ -128,10 +130,10 @@
     z-index: 2;
   }
 
-  .main-nav--opened .main-nav__item {
-    border-bottom: $border-line;
-    background-color: $white;
-  }
+  // .main-nav--opened .main-nav__item {
+  //   border-bottom: $border-line;
+  //   background-color: $white;
+  // }
 
   .main-nav--opened .main-nav__item--add {
     display: none;

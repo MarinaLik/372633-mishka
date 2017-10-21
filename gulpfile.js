@@ -82,7 +82,7 @@ gulp.task("clean", function () {
 });
 
 gulp.task("js", function() {
-  return gulp.src("js/script.js")
+  return gulp.src(["js/script.js", "js/svg4everybody.js"])
     .pipe(plumber())
     .pipe(uglify())
     .pipe(gulp.dest("build/js"))
