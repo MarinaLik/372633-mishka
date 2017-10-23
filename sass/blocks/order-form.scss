@@ -48,7 +48,7 @@
 }
 
 .order-form label {
-  cursor: pointer;
+  font-family: $font-family;
 }
 
 .order-form__label-radio,
@@ -60,6 +60,7 @@
 
   @include font-set($font-size, 18px);
   color: $black;
+  cursor: pointer;
 }
 
 .order-form__label-radio {
@@ -167,9 +168,11 @@
   padding: 16px 1px;
 
   @include font($font-size, 18px);
+  font-family: $font-family;
   color: $color-primary;
   border: none;
   box-shadow: inset 0 -2px 0 $black;
+  outline: none;
 
   &:hover,
   &:focus,
@@ -223,8 +226,10 @@
   padding: 17px;
 
   @include font($font-size, 18px);
+  font-family: $font-family;
   color: $color-primary;
   border: 2px solid $color-primary;
+  outline: none;
 
   &:hover,
   &:focus,
