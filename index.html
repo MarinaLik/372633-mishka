@@ -32,18 +32,18 @@
             <a href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item main-nav__item--search">
-            <a href="#">
+            <a href="search.html">
               <svg class="icon icon--search" width="19" height="18"><use xlink:href="img/sprite.svg#icon-search"></use></svg>Поиск по сайту</a>
           </li>
           <li class="main-nav__item main-nav__item--cart">
-            <a href="#">
+            <a href="basket.html">
               <svg class="icon icon--cart" width="20" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>Корзина: пока пуста</a>
           </li>
           <li class="main-nav__item main-nav__item--add">
-            <a href="#">Новые поступления</a>
+            <a href="new-goods.html">Новые поступления</a>
           </li>
           <li class="main-nav__item main-nav__item--add">
-            <a href="#">Распродажа</a>
+            <a href="salary.html">Распродажа</a>
           </li>
         </ul>
       </nav>
@@ -56,11 +56,11 @@
       <div class="categories">
         <ul class="categories__list">
           <li class="categories__item">
-            <a class="categories__link categories__link--interior" href="#"><span class="categories__name">Предметы интерьера</span>
+            <a class="categories__link categories__link--interior" href="catalog-interior.html"><span class="categories__name">Предметы интерьера</span>
               <svg class="icon icon--interior" width="41" height="62"><use xlink:href="img/sprite.svg#icon-interior"></use></svg></a>
           </li>
           <li class="categories__item">
-            <a class="categories__link categories__link--toys" href="#"><span class="categories__name">Детские игрушки</span>
+            <a class="categories__link categories__link--toys" href="catalog-toys.html"><span class="categories__name">Детские игрушки</span>
             <svg class="icon icon--toy" width="60" height="60"><use xlink:href="img/sprite.svg#icon-toy"></use></svg></a>
           </li>
         </ul>
@@ -100,7 +100,7 @@
           </div>
           <footer class="product-week__footer">
             <b class="product-week__price">Цена: 990 руб.</b>
-            <a class="product-week__btn btn" href="#">Заказать</a>
+            <a class="product-week__btn btn" href="order.html">Заказать</a>
           </footer>
         </div>
       </article>
@@ -153,7 +153,7 @@
               <button class="slider__btn slider__btn--next" title="Вперед">Вперед</button>
             </div>
           </div>
-          <a class="reviews__btn btn" href="#">Написать</a>
+          <a class="reviews__btn btn" href="reviews.html">Написать</a>
         </div>
       </section>
       <section class="contacts">
@@ -182,7 +182,7 @@
           </picture>
           <svg class="contacts__map-point" width="67" height="100"><use xlink:href="img/sprite.svg#icon-map-pin"></use></svg>
         </div>
-        <a class="contacts__btn btn" href="#">Напишите нам</a>
+        <a class="contacts__btn btn" href="write-us.html">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -212,17 +212,18 @@
         </div>
       </div>
     </footer>
+    <div class="overlay"></div>
     <div class="modal">
       <b class="modal__title">Добавить в корзину</b>
       <form class="modal__form" method="post" action="http://echo.htmlacademy.ru/">
         <p class="modal__caption">Выберите размер:</p>
         <div class="modal__inner">
           <input class="modal__input" type="radio" id="size-s" name="size" checked>
-          <label class="modal__label" for="size-s">S</label>
+          <label class="modal__label" for="size-s">s</label>
           <input class="modal__input" type="radio" id="size-m" name="size">
-          <label class="modal__label" for="size-m">M</label>
+          <label class="modal__label" for="size-m">m</label>
           <input class="modal__input" type="radio" id="size-l" name="size">
-          <label class="modal__label" for="size-l">L</label>
+          <label class="modal__label" for="size-l">l</label>
         </div>
         <button class="modal__btn btn" type="submit">Добавить</button>
       </form>

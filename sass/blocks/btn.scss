@@ -1,5 +1,6 @@
 .btn {
   @include font-caps(700, 17px, 20px);
+  font-family: $font-family;
   display: block;
   padding-top: 14px;
   padding-bottom: 14px;

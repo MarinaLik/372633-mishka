@@ -10,8 +10,11 @@
   @include indent(0, 33px 0 45px);
   background-color: $white;
   border: 1px solid #c6c6c6;
-  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25),
-    0 0 100vw 100vh rgba($white, 0.9);
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.modal--show {
+  display: block;
 }
 
 .modal__title {
@@ -46,7 +49,8 @@
 }
 
 .modal__label {
-  @include font-set($font-size, 48px);
+  @include font-caps(700, $font-size, 48px);
+  font-family: $font-family;
   color: $color-primary;
   width: 78px;
   height: 48px;

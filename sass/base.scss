@@ -23,8 +23,6 @@ body {
   @include indent(0 auto, 0);
   min-width: 320px;
   min-height: 100vh;
-  // display: flex;
-  // flex-direction: column;
   position: relative;
   word-wrap: break-word;
   font-family: $font-family;
@@ -51,6 +49,23 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($white, 0.9);
+  z-index: 6;
+}
+
+.overlay--show {
+  display: block;
 }
 
 // Блоки без элементов по БЭМ
