@@ -1,4 +1,19 @@
+input[name="slider__toggle"] {
+  display: none;
+}
+
+.slider__item {
+  display: none;
+
+  @include indent;
+}
+
+input[name="slider__toggle"]:checked +.slider__item {
+  display: block;
+}
+
 .slider__pagination {
+  position: relative;
   display: flex;
   margin: 31px 0 38px;
 }
@@ -44,7 +59,7 @@
 }
 
 .slider__btn--next::after {
-  right: 43px;
+  right: 39px;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
@@ -52,38 +67,38 @@
 .slider__btn:hover,
 .slider__btn:focus {
   &::before {
-    background-color: rgba($black, 0.6);
+    background-color: #686868;
   }
 }
 
 .slider__btn:active::before {
-  background-color: rgba($black, 0.3);
+  background-color: rgba(#686868, 0.5);
 }
 
 .slider__btn--prev:hover,
 .slider__btn--prev:focus {
   &::after {
-    border-bottom-color: rgba($black, 0.6);
-    border-left-color: rgba($black, 0.6);
+    border-bottom-color: #686868;
+    border-left-color: #686868;
   }
 }
 
 .slider__btn--next:hover,
 .slider__btn--next:focus {
   &::after {
-    border-top-color: rgba($black, 0.6);
-    border-right-color: rgba($black, 0.6);
+    border-top-color: #686868;
+    border-right-color: #686868;
   }
 }
 
 .slider__btn--prev:active::after {
-  border-bottom-color: rgba($black, 0.3);
-  border-left-color: rgba($black, 0.3);
+  border-bottom-color: rgba(#686868, 0.5);
+  border-left-color: rgba(#686868, 0.5);
 }
 
 .slider__btn--next:active::after {
-  border-top-color: rgba($black, 0.3);
-  border-right-color: rgba($black, 0.3);
+  border-top-color: rgba(#686868, 0.5);
+  border-right-color: rgba(#686868, 0.5);
 }
 
 .slider__btn--next {

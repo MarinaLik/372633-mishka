@@ -23,10 +23,6 @@
   color: $black;
 }
 
-.reviews__item {
-  @include indent;
-}
-
 .reviews__text {
   @include indent;
   @include font(15px, 2);
@@ -86,6 +82,7 @@
 
   .reviews__item {
     width: 100%;
+    min-height: 210px;
   }
 
   .reviews__text {
@@ -120,6 +117,11 @@
 
     @include font-set(53px, 57px);
   }
+
+  .reviews__item {
+    min-height: 180px;
+  }
+
 
   .reviews__text {
     padding-right: 105px;
